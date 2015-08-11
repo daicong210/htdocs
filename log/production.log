@@ -1,0 +1,1623 @@
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+Migrating to Setup (1)
+Migrating to IssueMove (2)
+Migrating to IssueAddNote (3)
+Migrating to ExportPdf (4)
+Migrating to IssueStartDate (5)
+Migrating to CalendarAndActivity (6)
+Migrating to CreateJournals (7)
+Migrating to CreateUserPreferences (8)
+Migrating to AddHideMailPref (9)
+Migrating to CreateComments (10)
+Migrating to AddNewsCommentsCount (11)
+Migrating to AddCommentsPermissions (12)
+Migrating to CreateQueries (13)
+Migrating to AddQueriesPermissions (14)
+Migrating to CreateRepositories (15)
+Migrating to AddRepositoriesPermissions (16)
+Migrating to CreateSettings (17)
+Migrating to SetDocAndFilesNotifications (18)
+Migrating to AddIssueStatusPosition (19)
+Migrating to AddRolePosition (20)
+Migrating to AddTrackerPosition (21)
+Migrating to SerializePossiblesValues (22)
+Migrating to AddTrackerIsInRoadmap (23)
+Migrating to AddRoadmapPermission (24)
+Migrating to AddSearchPermission (25)
+Migrating to AddRepositoryLoginAndPassword (26)
+Migrating to CreateWikis (27)
+Migrating to CreateWikiPages (28)
+Migrating to CreateWikiContents (29)
+Migrating to AddProjectsFeedsPermissions (30)
+Migrating to AddRepositoryRootUrl (31)
+Migrating to CreateTimeEntries (32)
+Migrating to AddTimelogPermissions (33)
+Migrating to CreateChangesets (34)
+Migrating to CreateChanges (35)
+Migrating to AddChangesetCommitDate (36)
+Migrating to AddProjectIdentifier (37)
+Migrating to AddCustomFieldIsFilter (38)
+Migrating to CreateWatchers (39)
+Migrating to CreateChangesetsIssues (40)
+Migrating to RenameCommentToComments (41)
+Migrating to CreateIssueRelations (42)
+Migrating to AddRelationsPermissions (43)
+Migrating to SetLanguageLengthToFive (44)
+Migrating to CreateBoards (45)
+Migrating to CreateMessages (46)
+Migrating to AddBoardsPermissions (47)
+Migrating to AllowNullVersionEffectiveDate (48)
+Migrating to AddWikiDestroyPagePermission (49)
+Migrating to AddWikiAttachmentsPermissions (50)
+Migrating to AddProjectStatus (51)
+Migrating to AddChangesRevision (52)
+Migrating to AddChangesBranch (53)
+Migrating to AddChangesetsScmid (54)
+Migrating to AddRepositoriesType (55)
+Migrating to AddRepositoriesChangesPermission (56)
+Migrating to AddVersionsWikiPageTitle (57)
+Migrating to AddIssueCategoriesAssignedToId (58)
+Migrating to AddRolesAssignable (59)
+Migrating to ChangeChangesetsCommitterLimit (60)
+Migrating to AddRolesBuiltin (61)
+Migrating to InsertBuiltinRoles (62)
+Migrating to AddRolesPermissions (63)
+Migrating to DropPermissions (64)
+Migrating to AddSettingsUpdatedOn (65)
+Migrating to AddCustomValueCustomizedIndex (66)
+Migrating to CreateWikiRedirects (67)
+Migrating to CreateEnabledModules (68)
+Migrating to AddIssuesEstimatedHours (69)
+Migrating to ChangeAttachmentsContentTypeLimit (70)
+Migrating to AddQueriesColumnNames (71)
+Migrating to AddEnumerationsPosition (72)
+Migrating to AddEnumerationsIsDefault (73)
+Migrating to AddAuthSourcesTls (74)
+Migrating to AddMembersMailNotification (75)
+Migrating to AllowNullPosition (76)
+Migrating to RemoveIssueStatusesHtmlColor (77)
+Migrating to AddCustomFieldsPosition (78)
+Migrating to AddUserPreferencesTimeZone (79)
+Migrating to AddUsersType (80)
+Migrating to CreateProjectsTrackers (81)
+Migrating to AddMessagesLocked (82)
+Migrating to AddMessagesSticky (83)
+Migrating to ChangeAuthSourcesAccountLimit (84)
+Migrating to AddRoleTrackerOldStatusIndexToWorkflows (85)
+Migrating to AddCustomFieldsSearchable (86)
+Migrating to ChangeProjectsDescriptionToText (87)
+Migrating to AddCustomFieldsDefaultValue (88)
+Migrating to AddAttachmentsDescription (89)
+Migrating to ChangeVersionsNameLimit (90)
+Migrating to ChangeChangesetsRevisionToString (91)
+Migrating to ChangeChangesFromRevisionToString (92)
+Migrating to AddWikiPagesProtected (93)
+Migrating to ChangeProjectsHomepageLimit (94)
+Migrating to AddWikiPagesParentId (95)
+Migrating to AddCommitAccessPermission (96)
+Migrating to AddViewWikiEditsPermission (97)
+Migrating to SetTopicAuthorsAsWatchers (98)
+Migrating to AddDeleteWikiPagesAttachmentsPermission (99)
+Migrating to AddChangesetsUserId (100)
+Migrating to PopulateChangesetsUserId (101)
+Migrating to AddCustomFieldsEditable (102)
+Migrating to SetCustomFieldsEditable (103)
+Migrating to AddProjectsLftAndRgt (104)
+Migrating to BuildProjectsTree (105)
+Migrating to RemoveProjectsProjectsCount (106)
+Migrating to AddOpenIdAuthenticationTables (107)
+Migrating to AddIdentityUrlToUsers (108)
+Migrating to AddWatchersUserIdTypeIndex (20090214190337)
+Migrating to AddQueriesSortCriteria (20090312172426)
+Migrating to AddProjectsTrackersUniqueIndex (20090312194159)
+Migrating to ExtendSettingsName (20090318181151)
+Migrating to AddTypeToEnumerations (20090323224724)
+Migrating to UpdateEnumerationsToSti (20090401221305)
+Migrating to AddActiveFieldToEnumerations (20090401231134)
+Migrating to AddProjectToEnumerations (20090403001910)
+Migrating to AddParentIdToEnumerations (20090406161854)
+Migrating to AddQueriesGroupBy (20090425161243)
+Migrating to CreateMemberRoles (20090503121501)
+Migrating to PopulateMemberRoles (20090503121505)
+Migrating to DropMembersRoleId (20090503121510)
+Migrating to FixMessagesStickyNull (20090614091200)
+Migrating to PopulateUsersType (20090704172350)
+Migrating to CreateGroupsUsers (20090704172355)
+Migrating to AddMemberRolesInheritedFrom (20090704172358)
+Migrating to FixUsersCustomValues (20091010093521)
+Migrating to AddMissingIndexesToWorkflows (20091017212227)
+Migrating to AddMissingIndexesToCustomFieldsProjects (20091017212457)
+Migrating to AddMissingIndexesToMessages (20091017212644)
+Migrating to AddMissingIndexesToRepositories (20091017212938)
+Migrating to AddMissingIndexesToComments (20091017213027)
+Migrating to AddMissingIndexesToEnumerations (20091017213113)
+Migrating to AddMissingIndexesToWikiPages (20091017213151)
+Migrating to AddMissingIndexesToWatchers (20091017213228)
+Migrating to AddMissingIndexesToAuthSources (20091017213257)
+Migrating to AddMissingIndexesToDocuments (20091017213332)
+Migrating to AddMissingIndexesToTokens (20091017213444)
+Migrating to AddMissingIndexesToChangesets (20091017213536)
+Migrating to AddMissingIndexesToIssueCategories (20091017213642)
+Migrating to AddMissingIndexesToMemberRoles (20091017213716)
+Migrating to AddMissingIndexesToBoards (20091017213757)
+Migrating to AddMissingIndexesToUserPreferences (20091017213835)
+Migrating to AddMissingIndexesToIssues (20091017213910)
+Migrating to AddMissingIndexesToMembers (20091017214015)
+Migrating to AddMissingIndexesToCustomFields (20091017214107)
+Migrating to AddMissingIndexesToQueries (20091017214136)
+Migrating to AddMissingIndexesToTimeEntries (20091017214236)
+Migrating to AddMissingIndexesToNews (20091017214308)
+Migrating to AddMissingIndexesToUsers (20091017214336)
+Migrating to AddMissingIndexesToAttachments (20091017214406)
+Migrating to AddMissingIndexesToWikiContents (20091017214440)
+Migrating to AddMissingIndexesToCustomValues (20091017214519)
+Migrating to AddMissingIndexesToJournals (20091017214611)
+Migrating to AddMissingIndexesToIssueRelations (20091017214644)
+Migrating to AddMissingIndexesToWikiRedirects (20091017214720)
+Migrating to AddMissingIndexesToCustomFieldsTrackers (20091017214750)
+Migrating to AddActivityIndexes (20091025163651)
+Migrating to AddVersionsStatus (20091108092559)
+Migrating to AddViewIssuesPermission (20091114105931)
+Migrating to AddDefaultDoneRatioToIssueStatus (20091123212029)
+Migrating to AddVersionsSharing (20091205124427)
+Migrating to AddLftAndRgtIndexesToProjects (20091220183509)
+Migrating to AddIndexToSettingsName (20091220183727)
+Migrating to AddIndexesToIssueStatus (20091220184736)
+Migrating to RemoveEnumerationsOpt (20091225164732)
+Migrating to ChangeWikiContentsTextLimit (20091227112908)
+Migrating to ChangeUsersMailNotificationToString (20100129193402)
+Migrating to UpdateMailNotificationValues (20100129193813)
+Migrating to AddIndexOnChangesetsScmid (20100221100219)
+Migrating to AddIssuesNestedSetsColumns (20100313132032)
+Migrating to AddIndexOnIssuesNestedSet (20100313171051)
+Migrating to ChangeChangesPathLengthLimit (20100705164950)
+Migrating to EnableCalendarAndGanttModulesWhereAppropriate (20100819172912)
+Migrating to AddUniqueIndexOnMembers (20101104182107)
+Migrating to AddCustomFieldsVisible (20101107130441)
+Migrating to ChangeProjectsNameLimit (20101114115114)
+Migrating to ChangeProjectsIdentifierLimit (20101114115359)
+Migrating to AddWorkflowsAssigneeAndAuthor (20110220160626)
+Migrating to AddUsersSalt (20110223180944)
+Migrating to SaltUserPasswords (20110223180953)
+Migrating to AddRepositoriesPathEncoding (20110224000000)
+Migrating to ChangeRepositoriesPasswordLimit (20110226120112)
+Migrating to ChangeAuthSourcesAccountPasswordLimit (20110226120132)
+Migrating to ChangeJournalDetailsValuesToText (20110227125750)
+Migrating to AddRepositoriesLogEncoding (20110228000000)
+Migrating to CopyRepositoriesLogEncoding (20110228000100)
+Migrating to AddIndexToUsersType (20110401192910)
+Migrating to AddRolesIssuesVisibility (20110408103312)
+Migrating to AddIssuesIsPrivate (20110412065600)
+Migrating to AddRepositoriesExtraInfo (20110511000000)
+Migrating to CreateChangesetParents (20110902000000)
+Migrating to AddUniqueIndexToIssueRelations (20111201201315)
+Migrating to AddRepositoriesIdentifier (20120115143024)
+Migrating to AddRepositoriesIsDefault (20120115143100)
+Migrating to SetDefaultRepositories (20120115143126)
+Migrating to AddCustomFieldsMultiple (20120127174243)
+Migrating to ChangeUsersLoginLimit (20120205111326)
+Migrating to ChangeAttachmentsContainerDefaults (20120223110929)
+Migrating to AddAuthSourcesFilter (20120301153455)
+Migrating to ChangeRepositoriesToFullSti (20120422150750)
+Migrating to AddTrackersFieldsBits (20120705074331)
+Migrating to AddAuthSourcesTimeout (20120707064544)
+Migrating to AddWorkflowsType (20120714122000)
+Migrating to UpdateWorkflowsToSti (20120714122100)
+Migrating to AddWorkflowsRuleFields (20120714122200)
+Migrating to AddBoardsParentId (20120731164049)
+Migrating to AddJournalsPrivateNotes (20120930112914)
+Migrating to AddEnumerationsPositionName (20121026002032)
+Migrating to PopulateEnumerationsPositionName (20121026003537)
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+OpenIdAuthentication.store is nil. Using in-memory store.
+Started GET "/redmine/" for 127.0.0.1 at 2015-07-01 18:38:50 +0800
+Processing by WelcomeController#index as HTML
+  Current user: anonymous
+  Rendered welcome/index.html.erb within layouts/base (456.0ms)
+Completed 200 OK in 1015ms (Views: 611.0ms | ActiveRecord: 67.0ms)
+Started GET "/redmine/login" for 127.0.0.1 at 2015-07-01 18:38:55 +0800
+Processing by AccountController#login as HTML
+  Current user: anonymous
+  Rendered account/login.html.erb within layouts/base (452.0ms)
+Completed 200 OK in 857ms (Views: 784.0ms | ActiveRecord: 11.0ms)
+Started POST "/redmine/login" for 127.0.0.1 at 2015-07-01 18:38:57 +0800
+Processing by AccountController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c0rK1zpsqyrxOcVcEihbX2zRCC1pFqksVa02reLDGg8=", "back_url"=>"http://localhost/redmine/", "username"=>"admin", "password"=>"[FILTERED]", "login"=>"登录 »"}
+  Current user: anonymous
+Successful authentication for 'admin' from ::1 at 2015-07-01 10:38:59 UTC
+Redirected to http://localhost/redmine/
+Completed 302 Found in 758ms (ActiveRecord: 742.0ms)
+Started GET "/redmine/" for 127.0.0.1 at 2015-07-01 18:38:59 +0800
+Processing by WelcomeController#index as HTML
+  Current user: admin (id=1)
+  Rendered welcome/index.html.erb within layouts/base (249.0ms)
+Completed 200 OK in 644ms (Views: 196.0ms | ActiveRecord: 280.0ms)
+Started GET "/redmine/my/page" for 127.0.0.1 at 2015-07-01 18:39:02 +0800
+Processing by MyController#page as HTML
+  Current user: admin (id=1)
+  Rendered issues/_list_simple.html.erb (1.0ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (81.0ms)
+  Rendered issues/_list_simple.html.erb (1.0ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (39.0ms)
+  Rendered my/page.html.erb within layouts/base (151.0ms)
+Completed 200 OK in 268ms (Views: 143.0ms | ActiveRecord: 46.0ms)
+Started GET "/redmine/admin" for 127.0.0.1 at 2015-07-01 18:39:03 +0800
+Processing by AdminController#index as HTML
+  Current user: admin (id=1)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered admin/index.html.erb within layouts/admin (35.0ms)
+  Rendered layouts/base.html.erb (61.0ms)
+Completed 200 OK in 124ms (Views: 101.0ms | ActiveRecord: 5.0ms)
+Started GET "/redmine/my/page" for 127.0.0.1 at 2015-07-01 18:39:05 +0800
+Processing by MyController#page as HTML
+  Current user: admin (id=1)
+  Rendered issues/_list_simple.html.erb (0.0ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (65.0ms)
+  Rendered issues/_list_simple.html.erb (0.0ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (6.0ms)
+  Rendered my/page.html.erb within layouts/base (79.0ms)
+Completed 200 OK in 139ms (Views: 67.0ms | ActiveRecord: 27.0ms)
+Started GET "/redmine/" for 127.0.0.1 at 2015-07-01 18:39:06 +0800
+Processing by WelcomeController#index as HTML
+  Current user: admin (id=1)
+  Rendered welcome/index.html.erb within layouts/base (2.0ms)
+Completed 200 OK in 94ms (Views: 84.0ms | ActiveRecord: 8.0ms)
+Started GET "/redmine/my/page" for 127.0.0.1 at 2015-07-01 18:39:17 +0800
+Processing by MyController#page as HTML
+  Current user: admin (id=1)
+  Rendered issues/_list_simple.html.erb (0.0ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (19.0ms)
+  Rendered issues/_list_simple.html.erb (0.0ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (6.0ms)
+  Rendered my/page.html.erb within layouts/base (26.0ms)
+Completed 200 OK in 83ms (Views: 25.0ms | ActiveRecord: 14.0ms)
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+Started GET "/redmine/" for 127.0.0.1 at 2015-07-01 20:55:09 +0800
+Processing by WelcomeController#index as HTML
+  Current user: admin (id=1)
+  Rendered welcome/index.html.erb within layouts/base (518.0ms)
+Completed 200 OK in 1028ms (Views: 748.0ms | ActiveRecord: 56.0ms)
+Started GET "/redmine/" for 127.0.0.1 at 2015-07-01 20:55:13 +0800
+Processing by WelcomeController#index as HTML
+  Current user: admin (id=1)
+  Rendered welcome/index.html.erb within layouts/base (1.0ms)
+Completed 200 OK in 63ms (Views: 55.0ms | ActiveRecord: 3.0ms)
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+Started GET "/redmine/" for 127.0.0.1 at 2015-07-01 20:56:38 +0800
+Processing by WelcomeController#index as HTML
+  Current user: admin (id=1)
+  Rendered welcome/index.html.erb within layouts/base (538.0ms)
+Completed 200 OK in 982ms (Views: 756.0ms | ActiveRecord: 43.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+OpenIdAuthentication.store is nil. Using in-memory store.
+Started GET "/" for 127.0.0.1 at 2015-07-01 21:05:03 +0800
+Processing by WelcomeController#index as HTML
+  Current user: anonymous
+  Rendered welcome/index.html.erb within layouts/base (453.0ms)
+Completed 200 OK in 893ms (Views: 618.0ms | ActiveRecord: 66.0ms)
+Started GET "/redmine/" for 127.0.0.1 at 2015-07-01 21:05:13 +0800
+
+ActionController::RoutingError (No route matches [GET] "/redmine"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  railties (3.2.11) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.3.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.3.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.3.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.3.1) lib/thin/connection.rb:53:in `process'
+  thin (1.3.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine-1.0.0-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.0-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.3.1) lib/thin/backends/base.rb:61:in `start'
+  thin (1.3.1) lib/thin/server.rb:159:in `start'
+  thin (1.3.1) lib/thin/controllers/controller.rb:86:in `start'
+  thin (1.3.1) lib/thin/runner.rb:185:in `run_command'
+  thin (1.3.1) lib/thin/runner.rb:151:in `run!'
+  thin (1.3.1) bin/thin:6:in `<top (required)>'
+  bin/thin:16:in `load'
+  bin/thin:16:in `<main>'
+
+
+Started GET "/redmine/" for 127.0.0.1 at 2015-07-01 21:05:31 +0800
+
+ActionController::RoutingError (No route matches [GET] "/redmine"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  railties (3.2.11) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.3.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.3.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.3.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.3.1) lib/thin/connection.rb:53:in `process'
+  thin (1.3.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine-1.0.0-x86 (mingw32) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine-1.0.0-x86 (mingw32) lib/eventmachine.rb:187:in `run'
+  thin (1.3.1) lib/thin/backends/base.rb:61:in `start'
+  thin (1.3.1) lib/thin/server.rb:159:in `start'
+  thin (1.3.1) lib/thin/controllers/controller.rb:86:in `start'
+  thin (1.3.1) lib/thin/runner.rb:185:in `run_command'
+  thin (1.3.1) lib/thin/runner.rb:151:in `run!'
+  thin (1.3.1) bin/thin:6:in `<top (required)>'
+  bin/thin:16:in `load'
+  bin/thin:16:in `<main>'
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-01 21:05:40 +0800
+Processing by WelcomeController#index as HTML
+  Current user: admin (id=1)
+  Rendered welcome/index.html.erb within layouts/base (406.0ms)
+Completed 200 OK in 678ms (Views: 152.0ms | ActiveRecord: 467.0ms)
+Started GET "/my/page" for 127.0.0.1 at 2015-07-01 21:05:42 +0800
+Processing by MyController#page as HTML
+  Current user: admin (id=1)
+  Rendered issues/_list_simple.html.erb (0.0ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (89.0ms)
+  Rendered issues/_list_simple.html.erb (0.0ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (6.0ms)
+  Rendered my/page.html.erb within layouts/base (143.0ms)
+Completed 200 OK in 223ms (Views: 108.0ms | ActiveRecord: 54.0ms)
+Started GET "/my/page" for 127.0.0.1 at 2015-07-01 21:05:49 +0800
+Processing by MyController#page as HTML
+  Current user: admin (id=1)
+  Rendered issues/_list_simple.html.erb (0.0ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (14.0ms)
+  Rendered issues/_list_simple.html.erb (0.0ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (6.0ms)
+  Rendered my/page.html.erb within layouts/base (21.0ms)
+Completed 200 OK in 82ms (Views: 22.0ms | ActiveRecord: 12.0ms)
+Started GET "/projects" for 127.0.0.1 at 2015-07-01 21:05:52 +0800
+Processing by ProjectsController#index as HTML
+  Current user: admin (id=1)
+  Rendered projects/index.html.erb within layouts/base (10.0ms)
+Completed 200 OK in 72ms (Views: 63.0ms | ActiveRecord: 5.0ms)
+Started GET "/projects/new" for 127.0.0.1 at 2015-07-01 21:05:55 +0800
+Processing by ProjectsController#new as HTML
+  Current user: admin (id=1)
+  Rendered projects/_form.html.erb (11.0ms)
+  Rendered projects/new.html.erb within layouts/base (24.0ms)
+Completed 200 OK in 209ms (Views: 72.0ms | ActiveRecord: 52.0ms)
+Started POST "/projects" for 127.0.0.1 at 2015-07-01 21:08:18 +0800
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B4rQoNg/Kz0dbFdVddVRmP6Kf8cq5g9RIsvAg2vMpAI=", "project"=>{"name"=>"Ogame", "description"=>"计划：\r\n  1.完成部门管理功能\r\n  2.完成绩效考核功能\r\n要求：\r\n   各个功能应该都在一个页面完成", "identifier"=>"ogame", "homepage"=>"", "is_public"=>"1", "enabled_module_names"=>["issue_tracking", "time_tracking", "news", "documents", "files", "wiki", "repository", "boards", "calendar", "gantt", ""], "tracker_ids"=>["1", "2", "3", ""]}, "continue"=>"创建并继续"}
+  Current user: admin (id=1)
+Redirected to http://localhost:3001/projects/new?
+Expire fragment views/localhost:3001/robots.txt (0.0ms)
+Completed 302 Found in 599ms (ActiveRecord: 482.0ms)
+Started GET "/projects/new" for 127.0.0.1 at 2015-07-01 21:08:18 +0800
+Processing by ProjectsController#new as HTML
+  Current user: admin (id=1)
+  Rendered projects/_form.html.erb (7.0ms)
+  Rendered projects/new.html.erb within layouts/base (7.0ms)
+Completed 200 OK in 64ms (Views: 56.0ms | ActiveRecord: 4.0ms)
+Started POST "/projects" for 127.0.0.1 at 2015-07-01 21:09:48 +0800
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B4rQoNg/Kz0dbFdVddVRmP6Kf8cq5g9RIsvAg2vMpAI=", "project"=>{"name"=>"Ogame_sub", "parent_id"=>"1", "description"=>"OGame子项目\r\n7月计划", "identifier"=>"game_sub", "homepage"=>"", "is_public"=>"1", "enabled_module_names"=>["issue_tracking", "time_tracking", "news", "documents", "files", "wiki", "repository", "boards", "calendar", "gantt", ""], "tracker_ids"=>["1", "2", "3", ""]}, "commit"=>"创建"}
+  Current user: admin (id=1)
+Redirected to http://localhost:3001/projects/game_sub/settings
+Expire fragment views/localhost:3001/robots.txt (0.0ms)
+Completed 302 Found in 215ms (ActiveRecord: 168.0ms)
+Started GET "/projects/game_sub/settings" for 127.0.0.1 at 2015-07-01 21:09:49 +0800
+Processing by ProjectsController#settings as HTML
+  Parameters: {"id"=>"game_sub"}
+  Current user: admin (id=1)
+  Rendered projects/_form.html.erb (11.0ms)
+  Rendered projects/_edit.html.erb (12.0ms)
+  Rendered projects/settings/_modules.html.erb (3.0ms)
+  Rendered projects/settings/_members.html.erb (12.0ms)
+  Rendered projects/settings/_versions.html.erb (10.0ms)
+  Rendered projects/settings/_issue_categories.html.erb (4.0ms)
+  Rendered projects/settings/_wiki.html.erb (3.0ms)
+  Rendered projects/settings/_repositories.html.erb (9.0ms)
+  Rendered projects/settings/_boards.html.erb (8.0ms)
+  Rendered projects/settings/_activities.html.erb (23.0ms)
+  Rendered common/_tabs.html.erb (148.0ms)
+  Rendered projects/settings.html.erb within layouts/base (151.0ms)
+Completed 200 OK in 253ms (Views: 205.0ms | ActiveRecord: 31.0ms)
+Started GET "/my/page" for 127.0.0.1 at 2015-07-01 21:09:52 +0800
+Processing by MyController#page as HTML
+  Current user: admin (id=1)
+  Rendered issues/_list_simple.html.erb (0.0ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (13.0ms)
+  Rendered issues/_list_simple.html.erb (0.0ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (5.0ms)
+  Rendered my/page.html.erb within layouts/base (21.0ms)
+Completed 200 OK in 82ms (Views: 22.0ms | ActiveRecord: 11.0ms)
+Started GET "/admin" for 127.0.0.1 at 2015-07-01 21:09:56 +0800
+Processing by AdminController#index as HTML
+  Current user: admin (id=1)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered admin/index.html.erb within layouts/admin (7.0ms)
+  Rendered layouts/base.html.erb (52.0ms)
+Completed 200 OK in 75ms (Views: 62.0ms | ActiveRecord: 6.0ms)
+Started GET "/admin/projects" for 127.0.0.1 at 2015-07-01 21:10:07 +0800
+Processing by AdminController#projects as HTML
+  Current user: admin (id=1)
+  Rendered admin/projects.html.erb within layouts/admin (7.0ms)
+  Rendered admin/_menu.html.erb (2.0ms)
+  Rendered layouts/base.html.erb (57.0ms)
+Completed 200 OK in 75ms (Views: 67.0ms | ActiveRecord: 5.0ms)
+Started GET "/roles" for 127.0.0.1 at 2015-07-01 21:10:12 +0800
+Processing by RolesController#index as HTML
+  Current user: admin (id=1)
+  Rendered roles/index.html.erb within layouts/admin (10.0ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (56.0ms)
+Completed 200 OK in 208ms (Views: 177.0ms | ActiveRecord: 24.0ms)
+Started GET "/users" for 127.0.0.1 at 2015-07-01 21:10:20 +0800
+Processing by UsersController#index as HTML
+  Current user: admin (id=1)
+  Rendered users/index.html.erb within layouts/admin (11.0ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (51.0ms)
+Completed 200 OK in 84ms (Views: 68.0ms | ActiveRecord: 7.0ms)
+Started GET "/roles" for 127.0.0.1 at 2015-07-01 21:10:36 +0800
+Processing by RolesController#index as HTML
+  Current user: admin (id=1)
+  Rendered roles/index.html.erb within layouts/admin (10.0ms)
+  Rendered admin/_menu.html.erb (2.0ms)
+  Rendered layouts/base.html.erb (53.0ms)
+Completed 200 OK in 70ms (Views: 62.0ms | ActiveRecord: 6.0ms)
+Started GET "/admin/projects" for 127.0.0.1 at 2015-07-01 21:10:40 +0800
+Processing by AdminController#projects as HTML
+  Current user: admin (id=1)
+  Rendered admin/projects.html.erb within layouts/admin (5.0ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (63.0ms)
+Completed 200 OK in 77ms (Views: 69.0ms | ActiveRecord: 7.0ms)
+Started GET "/users" for 127.0.0.1 at 2015-07-01 21:10:52 +0800
+Processing by UsersController#index as HTML
+  Current user: admin (id=1)
+  Rendered users/index.html.erb within layouts/admin (10.0ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (53.0ms)
+Completed 200 OK in 73ms (Views: 62.0ms | ActiveRecord: 9.0ms)
+Started GET "/groups" for 127.0.0.1 at 2015-07-01 21:10:57 +0800
+Processing by GroupsController#index as HTML
+  Current user: admin (id=1)
+  Rendered groups/index.html.erb within layouts/admin (1.0ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (55.0ms)
+Completed 200 OK in 99ms (Views: 91.0ms | ActiveRecord: 4.0ms)
+Started GET "/groups/new" for 127.0.0.1 at 2015-07-01 21:11:01 +0800
+Processing by GroupsController#new as HTML
+  Current user: admin (id=1)
+  Rendered groups/_form.html.erb (1.0ms)
+  Rendered groups/new.html.erb within layouts/admin (7.0ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (59.0ms)
+Completed 200 OK in 90ms (Views: 69.0ms | ActiveRecord: 5.0ms)
+Started POST "/groups" for 127.0.0.1 at 2015-07-01 21:11:17 +0800
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B4rQoNg/Kz0dbFdVddVRmP6Kf8cq5g9RIsvAg2vMpAI=", "group"=>{"name"=>"程序"}, "continue"=>"创建并继续"}
+  Current user: admin (id=1)
+Redirected to http://localhost:3001/groups/new
+Completed 302 Found in 769ms (ActiveRecord: 759.0ms)
+Started GET "/groups/new" for 127.0.0.1 at 2015-07-01 21:11:18 +0800
+Processing by GroupsController#new as HTML
+  Current user: admin (id=1)
+  Rendered groups/_form.html.erb (1.0ms)
+  Rendered groups/new.html.erb within layouts/admin (3.0ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (58.0ms)
+Completed 200 OK in 67ms (Views: 59.0ms | ActiveRecord: 5.0ms)
+Started POST "/groups" for 127.0.0.1 at 2015-07-01 21:11:25 +0800
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B4rQoNg/Kz0dbFdVddVRmP6Kf8cq5g9RIsvAg2vMpAI=", "group"=>{"name"=>"测试"}, "commit"=>"创建"}
+  Current user: admin (id=1)
+Redirected to http://localhost:3001/groups
+Completed 302 Found in 52ms (ActiveRecord: 46.0ms)
+Started GET "/groups" for 127.0.0.1 at 2015-07-01 21:11:25 +0800
+Processing by GroupsController#index as HTML
+  Current user: admin (id=1)
+  Rendered groups/index.html.erb within layouts/admin (8.0ms)
+  Rendered admin/_menu.html.erb (2.0ms)
+  Rendered layouts/base.html.erb (59.0ms)
+Completed 200 OK in 74ms (Views: 64.0ms | ActiveRecord: 6.0ms)
+Started GET "/groups/new" for 127.0.0.1 at 2015-07-01 21:11:31 +0800
+Processing by GroupsController#new as HTML
+  Current user: admin (id=1)
+  Rendered groups/_form.html.erb (1.0ms)
+  Rendered groups/new.html.erb within layouts/admin (3.0ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (52.0ms)
+Completed 200 OK in 60ms (Views: 53.0ms | ActiveRecord: 5.0ms)
+Started POST "/groups" for 127.0.0.1 at 2015-07-01 21:11:38 +0800
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B4rQoNg/Kz0dbFdVddVRmP6Kf8cq5g9RIsvAg2vMpAI=", "group"=>{"name"=>"策划"}, "continue"=>"创建并继续"}
+  Current user: admin (id=1)
+Redirected to http://localhost:3001/groups/new
+Completed 302 Found in 344ms (ActiveRecord: 336.0ms)
+Started GET "/groups/new" for 127.0.0.1 at 2015-07-01 21:11:38 +0800
+Processing by GroupsController#new as HTML
+  Current user: admin (id=1)
+  Rendered groups/_form.html.erb (1.0ms)
+  Rendered groups/new.html.erb within layouts/admin (1.0ms)
+  Rendered admin/_menu.html.erb (2.0ms)
+  Rendered layouts/base.html.erb (81.0ms)
+Completed 200 OK in 88ms (Views: 82.0ms | ActiveRecord: 4.0ms)
+Started POST "/groups" for 127.0.0.1 at 2015-07-01 21:11:46 +0800
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B4rQoNg/Kz0dbFdVddVRmP6Kf8cq5g9RIsvAg2vMpAI=", "group"=>{"name"=>"美术"}, "commit"=>"创建"}
+  Current user: admin (id=1)
+Redirected to http://localhost:3001/groups
+Completed 302 Found in 101ms (ActiveRecord: 94.0ms)
+Started GET "/groups" for 127.0.0.1 at 2015-07-01 21:11:46 +0800
+Processing by GroupsController#index as HTML
+  Current user: admin (id=1)
+  Rendered groups/index.html.erb within layouts/admin (8.0ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (54.0ms)
+Completed 200 OK in 72ms (Views: 60.0ms | ActiveRecord: 6.0ms)
+Started GET "/users" for 127.0.0.1 at 2015-07-01 21:12:05 +0800
+Processing by UsersController#index as HTML
+  Current user: admin (id=1)
+  Rendered users/index.html.erb within layouts/admin (8.0ms)
+  Rendered admin/_menu.html.erb (2.0ms)
+  Rendered layouts/base.html.erb (62.0ms)
+Completed 200 OK in 80ms (Views: 69.0ms | ActiveRecord: 6.0ms)
+Started GET "/roles" for 127.0.0.1 at 2015-07-01 21:12:10 +0800
+Processing by RolesController#index as HTML
+  Current user: admin (id=1)
+  Rendered roles/index.html.erb within layouts/admin (9.0ms)
+  Rendered admin/_menu.html.erb (2.0ms)
+  Rendered layouts/base.html.erb (56.0ms)
+Completed 200 OK in 77ms (Views: 64.0ms | ActiveRecord: 9.0ms)
+Started GET "/roles/3/edit" for 127.0.0.1 at 2015-07-01 21:12:12 +0800
+Processing by RolesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  Current user: admin (id=1)
+  Rendered roles/_form.html.erb (9.0ms)
+  Rendered roles/edit.html.erb within layouts/admin (15.0ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (51.0ms)
+Completed 200 OK in 76ms (Views: 69.0ms | ActiveRecord: 4.0ms)
+Started GET "/roles/3/edit" for 127.0.0.1 at 2015-07-01 21:12:15 +0800
+Processing by RolesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  Current user: admin (id=1)
+  Rendered roles/_form.html.erb (8.0ms)
+  Rendered roles/edit.html.erb within layouts/admin (9.0ms)
+  Rendered admin/_menu.html.erb (2.0ms)
+  Rendered layouts/base.html.erb (55.0ms)
+Completed 200 OK in 71ms (Views: 62.0ms | ActiveRecord: 8.0ms)
+Started GET "/admin" for 127.0.0.1 at 2015-07-01 21:12:35 +0800
+Processing by AdminController#index as HTML
+  Current user: admin (id=1)
+  Rendered admin/_menu.html.erb (2.0ms)
+  Rendered admin/index.html.erb within layouts/admin (3.0ms)
+  Rendered layouts/base.html.erb (58.0ms)
+Completed 200 OK in 66ms (Views: 57.0ms | ActiveRecord: 7.0ms)
+Started GET "/my/page" for 127.0.0.1 at 2015-07-01 21:12:39 +0800
+Processing by MyController#page as HTML
+  Current user: admin (id=1)
+  Rendered issues/_list_simple.html.erb (0.0ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (12.0ms)
+  Rendered issues/_list_simple.html.erb (0.0ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (4.0ms)
+  Rendered my/page.html.erb within layouts/base (18.0ms)
+Completed 200 OK in 76ms (Views: 19.0ms | ActiveRecord: 11.0ms)
+Started GET "/projects" for 127.0.0.1 at 2015-07-01 21:12:40 +0800
+Processing by ProjectsController#index as HTML
+  Current user: admin (id=1)
+  Rendered projects/index.html.erb within layouts/base (13.0ms)
+Completed 200 OK in 64ms (Views: 56.0ms | ActiveRecord: 5.0ms)
+Started GET "/projects" for 127.0.0.1 at 2015-07-01 21:12:49 +0800
+Processing by ProjectsController#index as HTML
+  Current user: admin (id=1)
+  Rendered projects/index.html.erb within layouts/base (12.0ms)
+Completed 200 OK in 64ms (Views: 54.0ms | ActiveRecord: 6.0ms)
+Started GET "/admin" for 127.0.0.1 at 2015-07-01 21:12:50 +0800
+Processing by AdminController#index as HTML
+  Current user: admin (id=1)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered admin/index.html.erb within layouts/admin (3.0ms)
+  Rendered layouts/base.html.erb (52.0ms)
+Completed 200 OK in 60ms (Views: 53.0ms | ActiveRecord: 4.0ms)
+Started GET "/settings" for 127.0.0.1 at 2015-07-01 21:12:56 +0800
+Processing by SettingsController#index as HTML
+  Current user: admin (id=1)
+  Rendered settings/_general.html.erb (12.0ms)
+  Rendered settings/_display.html.erb (6621.4ms)
+  Rendered settings/_authentication.html.erb (10.0ms)
+  Rendered settings/_projects.html.erb (4.0ms)
+  Rendered queries/_columns.html.erb (5.0ms)
+  Rendered settings/_issues.html.erb (110.0ms)
+  Rendered settings/_notifications.html.erb (50.0ms)
+  Rendered settings/_mail_handler.html.erb (4.0ms)
+SCM command failed, make sure that your SCM command (e.g. svn) is in PATH (D:\BitNami\redmine-2.2.2-0\imagemagick\;D:/BitNami/redmine-2.2.2-0/ruby/lib/ruby/gems/1.9.1/bin;D:\ProgramFiles\ImageMagick-6.9.1-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files (x86)\Lua\5.1;D:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\TortoiseSVN\bin;D:\Program Files (x86)\CMake\bin;D:\BitNami\redmine-2.2.2-0\ruby\bin;D:\datum\CEGUI\cegui-0.8.4\dependencies;D:\BitNami\redmine-2.2.2-0\DevKit\mingw\bin;D:\BitNami\redmine-2.2.2-0\DevKit\bin;C:\Program Files (x86)\nodejs\;C:\ProgramData\Oracle\Java\javapath;D:\BitNami\redmine-2.2.2-0/git/bin;D:\BitNami\redmine-2.2.2-0/subversion/bin;D:\BitNami\redmine-2.2.2-0\imagemagick)
+You can configure your scm commands in config/configuration.yml.
+"darcs" --version
+with: No such file or directory - "darcs" --version
+scm: error during get scm available: No such file or directory - "darcs" --version
+SCM command failed, make sure that your SCM command (e.g. svn) is in PATH (D:\BitNami\redmine-2.2.2-0\imagemagick\;D:/BitNami/redmine-2.2.2-0/ruby/lib/ruby/gems/1.9.1/bin;D:\ProgramFiles\ImageMagick-6.9.1-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files (x86)\Lua\5.1;D:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\TortoiseSVN\bin;D:\Program Files (x86)\CMake\bin;D:\BitNami\redmine-2.2.2-0\ruby\bin;D:\datum\CEGUI\cegui-0.8.4\dependencies;D:\BitNami\redmine-2.2.2-0\DevKit\mingw\bin;D:\BitNami\redmine-2.2.2-0\DevKit\bin;C:\Program Files (x86)\nodejs\;C:\ProgramData\Oracle\Java\javapath;D:\BitNami\redmine-2.2.2-0/git/bin;D:\BitNami\redmine-2.2.2-0/subversion/bin;D:\BitNami\redmine-2.2.2-0\imagemagick)
+You can configure your scm commands in config/configuration.yml.
+"darcs" --version
+with: No such file or directory - "darcs" --version
+scm: error during get version string: No such file or directory - "darcs" --version
+SCM command failed, make sure that your SCM command (e.g. svn) is in PATH (D:\BitNami\redmine-2.2.2-0\imagemagick\;D:/BitNami/redmine-2.2.2-0/ruby/lib/ruby/gems/1.9.1/bin;D:\ProgramFiles\ImageMagick-6.9.1-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files (x86)\Lua\5.1;D:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\TortoiseSVN\bin;D:\Program Files (x86)\CMake\bin;D:\BitNami\redmine-2.2.2-0\ruby\bin;D:\datum\CEGUI\cegui-0.8.4\dependencies;D:\BitNami\redmine-2.2.2-0\DevKit\mingw\bin;D:\BitNami\redmine-2.2.2-0\DevKit\bin;C:\Program Files (x86)\nodejs\;C:\ProgramData\Oracle\Java\javapath;D:\BitNami\redmine-2.2.2-0/git/bin;D:\BitNami\redmine-2.2.2-0/subversion/bin;D:\BitNami\redmine-2.2.2-0\imagemagick)
+You can configure your scm commands in config/configuration.yml.
+"hg" --version
+with: No such file or directory - "hg" --version
+scm: error during get scm available: No such file or directory - "hg" --version
+SCM command failed, make sure that your SCM command (e.g. svn) is in PATH (D:\BitNami\redmine-2.2.2-0\imagemagick\;D:/BitNami/redmine-2.2.2-0/ruby/lib/ruby/gems/1.9.1/bin;D:\ProgramFiles\ImageMagick-6.9.1-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files (x86)\Lua\5.1;D:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\TortoiseSVN\bin;D:\Program Files (x86)\CMake\bin;D:\BitNami\redmine-2.2.2-0\ruby\bin;D:\datum\CEGUI\cegui-0.8.4\dependencies;D:\BitNami\redmine-2.2.2-0\DevKit\mingw\bin;D:\BitNami\redmine-2.2.2-0\DevKit\bin;C:\Program Files (x86)\nodejs\;C:\ProgramData\Oracle\Java\javapath;D:\BitNami\redmine-2.2.2-0/git/bin;D:\BitNami\redmine-2.2.2-0/subversion/bin;D:\BitNami\redmine-2.2.2-0\imagemagick)
+You can configure your scm commands in config/configuration.yml.
+"hg" --version
+with: No such file or directory - "hg" --version
+scm: error during get version string: No such file or directory - "hg" --version
+SCM command failed, make sure that your SCM command (e.g. svn) is in PATH (D:\BitNami\redmine-2.2.2-0\imagemagick\;D:/BitNami/redmine-2.2.2-0/ruby/lib/ruby/gems/1.9.1/bin;D:\ProgramFiles\ImageMagick-6.9.1-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files (x86)\Lua\5.1;D:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\TortoiseSVN\bin;D:\Program Files (x86)\CMake\bin;D:\BitNami\redmine-2.2.2-0\ruby\bin;D:\datum\CEGUI\cegui-0.8.4\dependencies;D:\BitNami\redmine-2.2.2-0\DevKit\mingw\bin;D:\BitNami\redmine-2.2.2-0\DevKit\bin;C:\Program Files (x86)\nodejs\;C:\ProgramData\Oracle\Java\javapath;D:\BitNami\redmine-2.2.2-0/git/bin;D:\BitNami\redmine-2.2.2-0/subversion/bin;D:\BitNami\redmine-2.2.2-0\imagemagick)
+You can configure your scm commands in config/configuration.yml.
+"cvs" --version
+with: No such file or directory - "cvs" --version
+scm: error during get scm available: No such file or directory - "cvs" --version
+SCM command failed, make sure that your SCM command (e.g. svn) is in PATH (D:\BitNami\redmine-2.2.2-0\imagemagick\;D:/BitNami/redmine-2.2.2-0/ruby/lib/ruby/gems/1.9.1/bin;D:\ProgramFiles\ImageMagick-6.9.1-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files (x86)\Lua\5.1;D:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\TortoiseSVN\bin;D:\Program Files (x86)\CMake\bin;D:\BitNami\redmine-2.2.2-0\ruby\bin;D:\datum\CEGUI\cegui-0.8.4\dependencies;D:\BitNami\redmine-2.2.2-0\DevKit\mingw\bin;D:\BitNami\redmine-2.2.2-0\DevKit\bin;C:\Program Files (x86)\nodejs\;C:\ProgramData\Oracle\Java\javapath;D:\BitNami\redmine-2.2.2-0/git/bin;D:\BitNami\redmine-2.2.2-0/subversion/bin;D:\BitNami\redmine-2.2.2-0\imagemagick)
+You can configure your scm commands in config/configuration.yml.
+"cvs" --version
+with: No such file or directory - "cvs" --version
+scm: error during get version string: No such file or directory - "cvs" --version
+SCM command failed, make sure that your SCM command (e.g. svn) is in PATH (D:\BitNami\redmine-2.2.2-0\imagemagick\;D:/BitNami/redmine-2.2.2-0/ruby/lib/ruby/gems/1.9.1/bin;D:\ProgramFiles\ImageMagick-6.9.1-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files (x86)\Lua\5.1;D:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\TortoiseSVN\bin;D:\Program Files (x86)\CMake\bin;D:\BitNami\redmine-2.2.2-0\ruby\bin;D:\datum\CEGUI\cegui-0.8.4\dependencies;D:\BitNami\redmine-2.2.2-0\DevKit\mingw\bin;D:\BitNami\redmine-2.2.2-0\DevKit\bin;C:\Program Files (x86)\nodejs\;C:\ProgramData\Oracle\Java\javapath;D:\BitNami\redmine-2.2.2-0/git/bin;D:\BitNami\redmine-2.2.2-0/subversion/bin;D:\BitNami\redmine-2.2.2-0\imagemagick)
+You can configure your scm commands in config/configuration.yml.
+"bzr" --version
+with: No such file or directory - "bzr" --version
+scm: error during get scm available: No such file or directory - "bzr" --version
+SCM command failed, make sure that your SCM command (e.g. svn) is in PATH (D:\BitNami\redmine-2.2.2-0\imagemagick\;D:/BitNami/redmine-2.2.2-0/ruby/lib/ruby/gems/1.9.1/bin;D:\ProgramFiles\ImageMagick-6.9.1-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files (x86)\Lua\5.1;D:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\TortoiseSVN\bin;D:\Program Files (x86)\CMake\bin;D:\BitNami\redmine-2.2.2-0\ruby\bin;D:\datum\CEGUI\cegui-0.8.4\dependencies;D:\BitNami\redmine-2.2.2-0\DevKit\mingw\bin;D:\BitNami\redmine-2.2.2-0\DevKit\bin;C:\Program Files (x86)\nodejs\;C:\ProgramData\Oracle\Java\javapath;D:\BitNami\redmine-2.2.2-0/git/bin;D:\BitNami\redmine-2.2.2-0/subversion/bin;D:\BitNami\redmine-2.2.2-0\imagemagick)
+You can configure your scm commands in config/configuration.yml.
+"bzr" --version
+with: No such file or directory - "bzr" --version
+scm: error during get version string: No such file or directory - "bzr" --version
+  Rendered settings/_repositories.html.erb (719.0ms)
+  Rendered common/_tabs.html.erb (7554.4ms)
+  Rendered settings/edit.html.erb within layouts/admin (7555.4ms)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered layouts/base.html.erb (98.0ms)
+Completed 200 OK in 7662ms (Views: 7632.4ms | ActiveRecord: 29.0ms)
+Started GET "/settings" for 127.0.0.1 at 2015-07-01 21:13:04 +0800
+Processing by SettingsController#index as HTML
+  Current user: admin (id=1)
+  Rendered settings/_general.html.erb (3.0ms)
+  Rendered settings/_display.html.erb (3.0ms)
+  Rendered settings/_authentication.html.erb (3.0ms)
+  Rendered settings/_projects.html.erb (4.0ms)
+  Rendered queries/_columns.html.erb (2.0ms)
+  Rendered settings/_issues.html.erb (6.0ms)
+  Rendered settings/_notifications.html.erb (3.0ms)
+  Rendered settings/_mail_handler.html.erb (1.0ms)
+SCM command failed, make sure that your SCM command (e.g. svn) is in PATH (D:\BitNami\redmine-2.2.2-0\imagemagick\;D:/BitNami/redmine-2.2.2-0/ruby/lib/ruby/gems/1.9.1/bin;D:\ProgramFiles\ImageMagick-6.9.1-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files (x86)\Lua\5.1;D:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\TortoiseSVN\bin;D:\Program Files (x86)\CMake\bin;D:\BitNami\redmine-2.2.2-0\ruby\bin;D:\datum\CEGUI\cegui-0.8.4\dependencies;D:\BitNami\redmine-2.2.2-0\DevKit\mingw\bin;D:\BitNami\redmine-2.2.2-0\DevKit\bin;C:\Program Files (x86)\nodejs\;C:\ProgramData\Oracle\Java\javapath;D:\BitNami\redmine-2.2.2-0/git/bin;D:\BitNami\redmine-2.2.2-0/subversion/bin;D:\BitNami\redmine-2.2.2-0\imagemagick)
+You can configure your scm commands in config/configuration.yml.
+"darcs" --version
+with: No such file or directory - "darcs" --version
+scm: error during get scm available: No such file or directory - "darcs" --version
+SCM command failed, make sure that your SCM command (e.g. svn) is in PATH (D:\BitNami\redmine-2.2.2-0\imagemagick\;D:/BitNami/redmine-2.2.2-0/ruby/lib/ruby/gems/1.9.1/bin;D:\ProgramFiles\ImageMagick-6.9.1-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files (x86)\Lua\5.1;D:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\TortoiseSVN\bin;D:\Program Files (x86)\CMake\bin;D:\BitNami\redmine-2.2.2-0\ruby\bin;D:\datum\CEGUI\cegui-0.8.4\dependencies;D:\BitNami\redmine-2.2.2-0\DevKit\mingw\bin;D:\BitNami\redmine-2.2.2-0\DevKit\bin;C:\Program Files (x86)\nodejs\;C:\ProgramData\Oracle\Java\javapath;D:\BitNami\redmine-2.2.2-0/git/bin;D:\BitNami\redmine-2.2.2-0/subversion/bin;D:\BitNami\redmine-2.2.2-0\imagemagick)
+You can configure your scm commands in config/configuration.yml.
+"darcs" --version
+with: No such file or directory - "darcs" --version
+scm: error during get version string: No such file or directory - "darcs" --version
+SCM command failed, make sure that your SCM command (e.g. svn) is in PATH (D:\BitNami\redmine-2.2.2-0\imagemagick\;D:/BitNami/redmine-2.2.2-0/ruby/lib/ruby/gems/1.9.1/bin;D:\ProgramFiles\ImageMagick-6.9.1-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files (x86)\Lua\5.1;D:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\TortoiseSVN\bin;D:\Program Files (x86)\CMake\bin;D:\BitNami\redmine-2.2.2-0\ruby\bin;D:\datum\CEGUI\cegui-0.8.4\dependencies;D:\BitNami\redmine-2.2.2-0\DevKit\mingw\bin;D:\BitNami\redmine-2.2.2-0\DevKit\bin;C:\Program Files (x86)\nodejs\;C:\ProgramData\Oracle\Java\javapath;D:\BitNami\redmine-2.2.2-0/git/bin;D:\BitNami\redmine-2.2.2-0/subversion/bin;D:\BitNami\redmine-2.2.2-0\imagemagick)
+You can configure your scm commands in config/configuration.yml.
+"hg" --version
+with: No such file or directory - "hg" --version
+scm: error during get scm available: No such file or directory - "hg" --version
+SCM command failed, make sure that your SCM command (e.g. svn) is in PATH (D:\BitNami\redmine-2.2.2-0\imagemagick\;D:/BitNami/redmine-2.2.2-0/ruby/lib/ruby/gems/1.9.1/bin;D:\ProgramFiles\ImageMagick-6.9.1-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files (x86)\Lua\5.1;D:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\TortoiseSVN\bin;D:\Program Files (x86)\CMake\bin;D:\BitNami\redmine-2.2.2-0\ruby\bin;D:\datum\CEGUI\cegui-0.8.4\dependencies;D:\BitNami\redmine-2.2.2-0\DevKit\mingw\bin;D:\BitNami\redmine-2.2.2-0\DevKit\bin;C:\Program Files (x86)\nodejs\;C:\ProgramData\Oracle\Java\javapath;D:\BitNami\redmine-2.2.2-0/git/bin;D:\BitNami\redmine-2.2.2-0/subversion/bin;D:\BitNami\redmine-2.2.2-0\imagemagick)
+You can configure your scm commands in config/configuration.yml.
+"hg" --version
+with: No such file or directory - "hg" --version
+scm: error during get version string: No such file or directory - "hg" --version
+SCM command failed, make sure that your SCM command (e.g. svn) is in PATH (D:\BitNami\redmine-2.2.2-0\imagemagick\;D:/BitNami/redmine-2.2.2-0/ruby/lib/ruby/gems/1.9.1/bin;D:\ProgramFiles\ImageMagick-6.9.1-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files (x86)\Lua\5.1;D:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\TortoiseSVN\bin;D:\Program Files (x86)\CMake\bin;D:\BitNami\redmine-2.2.2-0\ruby\bin;D:\datum\CEGUI\cegui-0.8.4\dependencies;D:\BitNami\redmine-2.2.2-0\DevKit\mingw\bin;D:\BitNami\redmine-2.2.2-0\DevKit\bin;C:\Program Files (x86)\nodejs\;C:\ProgramData\Oracle\Java\javapath;D:\BitNami\redmine-2.2.2-0/git/bin;D:\BitNami\redmine-2.2.2-0/subversion/bin;D:\BitNami\redmine-2.2.2-0\imagemagick)
+You can configure your scm commands in config/configuration.yml.
+"cvs" --version
+with: No such file or directory - "cvs" --version
+scm: error during get scm available: No such file or directory - "cvs" --version
+SCM command failed, make sure that your SCM command (e.g. svn) is in PATH (D:\BitNami\redmine-2.2.2-0\imagemagick\;D:/BitNami/redmine-2.2.2-0/ruby/lib/ruby/gems/1.9.1/bin;D:\ProgramFiles\ImageMagick-6.9.1-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files (x86)\Lua\5.1;D:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\TortoiseSVN\bin;D:\Program Files (x86)\CMake\bin;D:\BitNami\redmine-2.2.2-0\ruby\bin;D:\datum\CEGUI\cegui-0.8.4\dependencies;D:\BitNami\redmine-2.2.2-0\DevKit\mingw\bin;D:\BitNami\redmine-2.2.2-0\DevKit\bin;C:\Program Files (x86)\nodejs\;C:\ProgramData\Oracle\Java\javapath;D:\BitNami\redmine-2.2.2-0/git/bin;D:\BitNami\redmine-2.2.2-0/subversion/bin;D:\BitNami\redmine-2.2.2-0\imagemagick)
+You can configure your scm commands in config/configuration.yml.
+"cvs" --version
+with: No such file or directory - "cvs" --version
+scm: error during get version string: No such file or directory - "cvs" --version
+SCM command failed, make sure that your SCM command (e.g. svn) is in PATH (D:\BitNami\redmine-2.2.2-0\imagemagick\;D:/BitNami/redmine-2.2.2-0/ruby/lib/ruby/gems/1.9.1/bin;D:\ProgramFiles\ImageMagick-6.9.1-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files (x86)\Lua\5.1;D:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\TortoiseSVN\bin;D:\Program Files (x86)\CMake\bin;D:\BitNami\redmine-2.2.2-0\ruby\bin;D:\datum\CEGUI\cegui-0.8.4\dependencies;D:\BitNami\redmine-2.2.2-0\DevKit\mingw\bin;D:\BitNami\redmine-2.2.2-0\DevKit\bin;C:\Program Files (x86)\nodejs\;C:\ProgramData\Oracle\Java\javapath;D:\BitNami\redmine-2.2.2-0/git/bin;D:\BitNami\redmine-2.2.2-0/subversion/bin;D:\BitNami\redmine-2.2.2-0\imagemagick)
+You can configure your scm commands in config/configuration.yml.
+"bzr" --version
+with: No such file or directory - "bzr" --version
+scm: error during get scm available: No such file or directory - "bzr" --version
+SCM command failed, make sure that your SCM command (e.g. svn) is in PATH (D:\BitNami\redmine-2.2.2-0\imagemagick\;D:/BitNami/redmine-2.2.2-0/ruby/lib/ruby/gems/1.9.1/bin;D:\ProgramFiles\ImageMagick-6.9.1-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files (x86)\Lua\5.1;D:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\TortoiseSVN\bin;D:\Program Files (x86)\CMake\bin;D:\BitNami\redmine-2.2.2-0\ruby\bin;D:\datum\CEGUI\cegui-0.8.4\dependencies;D:\BitNami\redmine-2.2.2-0\DevKit\mingw\bin;D:\BitNami\redmine-2.2.2-0\DevKit\bin;C:\Program Files (x86)\nodejs\;C:\ProgramData\Oracle\Java\javapath;D:\BitNami\redmine-2.2.2-0/git/bin;D:\BitNami\redmine-2.2.2-0/subversion/bin;D:\BitNami\redmine-2.2.2-0\imagemagick)
+You can configure your scm commands in config/configuration.yml.
+"bzr" --version
+with: No such file or directory - "bzr" --version
+scm: error during get version string: No such file or directory - "bzr" --version
+  Rendered settings/_repositories.html.erb (47.0ms)
+  Rendered common/_tabs.html.erb (73.0ms)
+  Rendered settings/edit.html.erb within layouts/admin (74.0ms)
+  Rendered admin/_menu.html.erb (2.0ms)
+  Rendered layouts/base.html.erb (51.0ms)
+Completed 200 OK in 133ms (Views: 122.0ms | ActiveRecord: 6.0ms)
+Started GET "/admin" for 127.0.0.1 at 2015-07-01 21:13:06 +0800
+Processing by AdminController#index as HTML
+  Current user: admin (id=1)
+  Rendered admin/_menu.html.erb (3.0ms)
+  Rendered admin/index.html.erb within layouts/admin (3.0ms)
+  Rendered layouts/base.html.erb (55.0ms)
+Completed 200 OK in 64ms (Views: 57.0ms | ActiveRecord: 6.0ms)
+Started GET "/projects" for 127.0.0.1 at 2015-07-01 21:13:10 +0800
+Processing by ProjectsController#index as HTML
+  Current user: admin (id=1)
+  Rendered projects/index.html.erb within layouts/base (13.0ms)
+Completed 200 OK in 69ms (Views: 60.0ms | ActiveRecord: 6.0ms)
+Started GET "/admin" for 127.0.0.1 at 2015-07-01 21:13:12 +0800
+Processing by AdminController#index as HTML
+  Current user: admin (id=1)
+  Rendered admin/_menu.html.erb (2.0ms)
+  Rendered admin/index.html.erb within layouts/admin (2.0ms)
+  Rendered layouts/base.html.erb (51.0ms)
+Completed 200 OK in 59ms (Views: 50.0ms | ActiveRecord: 6.0ms)
+Started GET "/admin/projects" for 127.0.0.1 at 2015-07-01 21:13:21 +0800
+Processing by AdminController#projects as HTML
+  Current user: admin (id=1)
+  Rendered admin/projects.html.erb within layouts/admin (5.0ms)
+  Rendered admin/_menu.html.erb (2.0ms)
+  Rendered layouts/base.html.erb (54.0ms)
+Completed 200 OK in 66ms (Views: 58.0ms | ActiveRecord: 5.0ms)
+Started GET "/projects/ogame/settings" for 127.0.0.1 at 2015-07-01 21:13:23 +0800
+Processing by ProjectsController#settings as HTML
+  Parameters: {"id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered projects/_form.html.erb (11.0ms)
+  Rendered projects/_edit.html.erb (12.0ms)
+  Rendered projects/settings/_modules.html.erb (2.0ms)
+  Rendered projects/settings/_members.html.erb (8.0ms)
+  Rendered projects/settings/_versions.html.erb (3.0ms)
+  Rendered projects/settings/_issue_categories.html.erb (1.0ms)
+  Rendered projects/settings/_wiki.html.erb (1.0ms)
+  Rendered projects/settings/_repositories.html.erb (2.0ms)
+  Rendered projects/settings/_boards.html.erb (1.0ms)
+  Rendered projects/settings/_activities.html.erb (6.0ms)
+  Rendered common/_tabs.html.erb (40.0ms)
+  Rendered projects/settings.html.erb within layouts/base (40.0ms)
+Completed 200 OK in 111ms (Views: 92.0ms | ActiveRecord: 16.0ms)
+Started POST "/projects/ogame/memberships" for 127.0.0.1 at 2015-07-01 21:14:28 +0800
+Processing by MembersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B4rQoNg/Kz0dbFdVddVRmP6Kf8cq5g9RIsvAg2vMpAI=", "principal_search"=>"", "membership"=>{"user_ids"=>["1"], "role_ids"=>["3"]}, "commit"=>"新增", "project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered projects/settings/_members.html.erb (12.0ms)
+  Rendered members/create.js.erb (28.0ms)
+Completed 200 OK in 333ms (Views: 51.0ms | ActiveRecord: 185.0ms)
+Started GET "/projects/ogame/issues" for 127.0.0.1 at 2015-07-01 21:14:34 +0800
+Processing by IssuesController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (9.0ms)
+  Rendered queries/_columns.html.erb (4.0ms)
+  Rendered issues/_sidebar.html.erb (5.0ms)
+  Rendered issues/index.html.erb within layouts/base (38.0ms)
+Completed 200 OK in 396ms (Views: 117.0ms | ActiveRecord: 236.0ms)
+Started GET "/projects/ogame/issues/new" for 127.0.0.1 at 2015-07-01 21:14:43 +0800
+Processing by IssuesController#new as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered issues/_form_custom_fields.html.erb (35.0ms)
+  Rendered issues/_attributes.html.erb (49.0ms)
+  Rendered issues/_form.html.erb (63.0ms)
+  Rendered attachments/_form.html.erb (19.0ms)
+  Rendered issues/new.html.erb within layouts/base (93.0ms)
+Completed 200 OK in 408ms (Views: 120.0ms | ActiveRecord: 113.0ms)
+Started GET "/projects/ogame/issues/gantt" for 127.0.0.1 at 2015-07-01 21:14:45 +0800
+Processing by GanttsController#show as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (8.0ms)
+  Rendered issues/_sidebar.html.erb (3.0ms)
+  Rendered gantts/show.html.erb within layouts/base (69.0ms)
+Completed 200 OK in 292ms (Views: 77.0ms | ActiveRecord: 97.0ms)
+Started GET "/projects/ogame/issues/calendar" for 127.0.0.1 at 2015-07-01 21:14:47 +0800
+Processing by CalendarsController#show as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (8.0ms)
+  Rendered common/_calendar.html.erb (3.0ms)
+  Rendered issues/_sidebar.html.erb (3.0ms)
+  Rendered calendars/show.html.erb within layouts/base (19.0ms)
+Completed 200 OK in 118ms (Views: 77.0ms | ActiveRecord: 15.0ms)
+Started GET "/projects/ogame/news" for 127.0.0.1 at 2015-07-01 21:14:51 +0800
+Processing by NewsController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered attachments/_form.html.erb (1.0ms)
+  Rendered news/_form.html.erb (3.0ms)
+  Rendered news/index.html.erb within layouts/base (13.0ms)
+Completed 200 OK in 102ms (Views: 73.0ms | ActiveRecord: 11.0ms)
+Started GET "/projects/ogame/documents" for 127.0.0.1 at 2015-07-01 21:14:52 +0800
+Processing by DocumentsController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered attachments/_form.html.erb (2.0ms)
+  Rendered documents/_form.html.erb (8.0ms)
+  Rendered documents/index.html.erb within layouts/base (15.0ms)
+Completed 200 OK in 225ms (Views: 79.0ms | ActiveRecord: 78.0ms)
+Started GET "/projects/ogame/wiki" for 127.0.0.1 at 2015-07-01 21:14:53 +0800
+Processing by WikiController#show as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered attachments/_form.html.erb (2.0ms)
+  Rendered wiki/edit.html.erb within layouts/base (10.0ms)
+Completed 200 OK in 201ms (Views: 70.0ms | ActiveRecord: 68.0ms)
+Started GET "/projects/ogame/files" for 127.0.0.1 at 2015-07-01 21:14:54 +0800
+Processing by FilesController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered files/index.html.erb within layouts/base (3.0ms)
+Completed 200 OK in 156ms (Views: 101.0ms | ActiveRecord: 40.0ms)
+Started GET "/projects/ogame/settings" for 127.0.0.1 at 2015-07-01 21:14:55 +0800
+Processing by ProjectsController#settings as HTML
+  Parameters: {"id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered projects/_form.html.erb (17.0ms)
+  Rendered projects/_edit.html.erb (18.0ms)
+  Rendered projects/settings/_modules.html.erb (3.0ms)
+  Rendered projects/settings/_members.html.erb (10.0ms)
+  Rendered projects/settings/_versions.html.erb (3.0ms)
+  Rendered projects/settings/_issue_categories.html.erb (1.0ms)
+  Rendered projects/settings/_wiki.html.erb (1.0ms)
+  Rendered projects/settings/_repositories.html.erb (1.0ms)
+  Rendered projects/settings/_boards.html.erb (1.0ms)
+  Rendered projects/settings/_activities.html.erb (6.0ms)
+  Rendered common/_tabs.html.erb (47.0ms)
+  Rendered projects/settings.html.erb within layouts/base (47.0ms)
+Completed 200 OK in 116ms (Views: 88.0ms | ActiveRecord: 23.0ms)
+Started GET "/projects/ogame/issues/new" for 127.0.0.1 at 2015-07-01 21:14:58 +0800
+Processing by IssuesController#new as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered issues/_form_custom_fields.html.erb (2.0ms)
+  Rendered issues/_attributes.html.erb (14.0ms)
+  Rendered issues/_form.html.erb (24.0ms)
+  Rendered attachments/_form.html.erb (1.0ms)
+  Rendered issues/new.html.erb within layouts/base (27.0ms)
+Completed 200 OK in 116ms (Views: 84.0ms | ActiveRecord: 17.0ms)
+Started GET "/watchers/new?project_id=ogame" for 127.0.0.1 at 2015-07-01 21:17:53 +0800
+Processing by WatchersController#new as JS
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered watchers/_new.html.erb (4.0ms)
+  Rendered watchers/new.js.erb (8.0ms)
+Completed 200 OK in 31ms (Views: 24.0ms | ActiveRecord: 1.0ms)
+Started POST "/projects/ogame/issues" for 127.0.0.1 at 2015-07-01 21:18:24 +0800
+Processing by IssuesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B4rQoNg/Kz0dbFdVddVRmP6Kf8cq5g9RIsvAg2vMpAI=", "issue"=>{"is_private"=>"0", "tracker_id"=>"1", "subject"=>"用rails generate scaffold 生成部门相关的rails框架内容", "description"=>"1.使用rails generate scaffold Department", "status_id"=>"1", "priority_id"=>"3", "assigned_to_id"=>"", "parent_issue_id"=>"", "start_date"=>"2015-07-01", "due_date"=>"2015-07-02", "estimated_hours"=>"", "done_ratio"=>"0", "watcher_user_ids"=>["1"]}, "attachments"=>{"1"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x3cb61d8 @original_filename="cb0320dbs03s.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"attachments[1][file]\"; filename=\"cb0320dbs03s.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/Windows/temp/RackMultipart20150701-5684-1crcsur>>, "description"=>""}}, "commit"=>"创建", "project_id"=>"ogame"}
+  Current user: admin (id=1)
+Saving attachment 'D:/BitNami/redmine-2.2.2-0/apps/redmine/htdocs/files/150701211825_cb0320dbs03s.jpg' (113901 bytes)
+  Rendered mailer/_issue.text.erb (1.0ms)
+  Rendered mailer/issue_add.text.erb within layouts/mailer (3.0ms)
+  Rendered mailer/_issue.html.erb (1.0ms)
+  Rendered mailer/issue_add.html.erb within layouts/mailer (5.0ms)
+Redirected to http://localhost:3001/issues/1
+Completed 302 Found in 169955ms (ActiveRecord: 385.0ms)
+Started GET "/issues/1" for 127.0.0.1 at 2015-07-01 21:21:15 +0800
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (5.0ms)
+  Rendered attachments/_links.html.erb (5.0ms)
+  Rendered issue_relations/_form.html.erb (2.0ms)
+  Rendered issues/_relations.html.erb (6.0ms)
+  Rendered issues/_action_menu.html.erb (2.0ms)
+  Rendered issues/_form_custom_fields.html.erb (0.0ms)
+  Rendered issues/_attributes.html.erb (12.0ms)
+  Rendered issues/_form.html.erb (22.0ms)
+  Rendered attachments/_form.html.erb (1.0ms)
+  Rendered issues/_edit.html.erb (33.0ms)
+  Rendered issues/_sidebar.html.erb (3.0ms)
+  Rendered watchers/_watchers.html.erb (6.0ms)
+  Rendered issues/show.html.erb within layouts/base (121.0ms)
+Completed 200 OK in 519ms (Views: 131.0ms | ActiveRecord: 252.0ms)
+Started GET "/attachments/1/cb0320dbs03s.jpg" for 127.0.0.1 at 2015-07-01 21:21:16 +0800
+Processing by AttachmentsController#show as HTML
+  Parameters: {"id"=>"1", "filename"=>"cb0320dbs03s.jpg"}
+  Current user: admin (id=1)
+Sent file D:/BitNami/redmine-2.2.2-0/apps/redmine/htdocs/files/150701211825_cb0320dbs03s.jpg (1.0ms)
+Completed 200 OK in 30ms (ActiveRecord: 2.0ms)
+Started GET "/projects/ogame/issues" for 127.0.0.1 at 2015-07-01 21:21:51 +0800
+Processing by IssuesController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (7.0ms)
+  Rendered queries/_columns.html.erb (1.0ms)
+  Rendered issues/_list.html.erb (8.0ms)
+  Rendered issues/_sidebar.html.erb (2.0ms)
+  Rendered issues/index.html.erb within layouts/base (28.0ms)
+Completed 200 OK in 162ms (Views: 124.0ms | ActiveRecord: 15.0ms)
+Started GET "/issues/1" for 127.0.0.1 at 2015-07-01 21:21:53 +0800
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (4.0ms)
+  Rendered attachments/_links.html.erb (3.0ms)
+  Rendered issue_relations/_form.html.erb (1.0ms)
+  Rendered issues/_relations.html.erb (2.0ms)
+  Rendered issues/_action_menu.html.erb (2.0ms)
+  Rendered issues/_form_custom_fields.html.erb (0.0ms)
+  Rendered issues/_attributes.html.erb (13.0ms)
+  Rendered issues/_form.html.erb (25.0ms)
+  Rendered attachments/_form.html.erb (1.0ms)
+  Rendered issues/_edit.html.erb (35.0ms)
+  Rendered issues/_sidebar.html.erb (3.0ms)
+  Rendered watchers/_watchers.html.erb (5.0ms)
+  Rendered issues/show.html.erb within layouts/base (70.0ms)
+Completed 200 OK in 196ms (Views: 74.0ms | ActiveRecord: 24.0ms)
+Started GET "/attachments/1/cb0320dbs03s.jpg" for 127.0.0.1 at 2015-07-01 21:21:53 +0800
+Processing by AttachmentsController#show as HTML
+  Parameters: {"id"=>"1", "filename"=>"cb0320dbs03s.jpg"}
+  Current user: admin (id=1)
+Completed 304 Not Modified in 6ms (ActiveRecord: 4.0ms)
+Started GET "/projects/ogame/issues/new" for 127.0.0.1 at 2015-07-01 21:22:25 +0800
+Processing by IssuesController#new as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered issues/_form_custom_fields.html.erb (3.0ms)
+  Rendered issues/_attributes.html.erb (15.0ms)
+  Rendered issues/_form.html.erb (24.0ms)
+  Rendered attachments/_form.html.erb (1.0ms)
+  Rendered issues/new.html.erb within layouts/base (29.0ms)
+Completed 200 OK in 116ms (Views: 84.0ms | ActiveRecord: 12.0ms)
+Started GET "/projects/ogame/issues" for 127.0.0.1 at 2015-07-01 21:22:27 +0800
+Processing by IssuesController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (8.0ms)
+  Rendered queries/_columns.html.erb (1.0ms)
+  Rendered issues/_list.html.erb (10.0ms)
+  Rendered issues/_sidebar.html.erb (3.0ms)
+  Rendered issues/index.html.erb within layouts/base (31.0ms)
+Completed 200 OK in 131ms (Views: 83.0ms | ActiveRecord: 24.0ms)
+Started GET "/projects/ogame/issues/new" for 127.0.0.1 at 2015-07-01 21:22:28 +0800
+Processing by IssuesController#new as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered issues/_form_custom_fields.html.erb (4.0ms)
+  Rendered issues/_attributes.html.erb (16.0ms)
+  Rendered issues/_form.html.erb (26.0ms)
+  Rendered attachments/_form.html.erb (2.0ms)
+  Rendered issues/new.html.erb within layouts/base (30.0ms)
+Completed 200 OK in 120ms (Views: 82.0ms | ActiveRecord: 23.0ms)
+Started POST "/projects/ogame/issues" for 127.0.0.1 at 2015-07-01 21:23:56 +0800
+Processing by IssuesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B4rQoNg/Kz0dbFdVddVRmP6Kf8cq5g9RIsvAg2vMpAI=", "issue"=>{"is_private"=>"0", "tracker_id"=>"1", "subject"=>"管理员配置选项增加部门管理tab页", "description"=>"1.需做权限控制，非管理员无权限不作显示", "status_id"=>"1", "priority_id"=>"3", "assigned_to_id"=>"1", "parent_issue_id"=>"", "start_date"=>"2015-07-01", "due_date"=>"2015-07-02", "estimated_hours"=>"", "done_ratio"=>"0", "watcher_user_ids"=>["1"]}, "attachments"=>{"1"=>{"description"=>""}}, "commit"=>"创建", "project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered mailer/_issue.text.erb (0.0ms)
+  Rendered mailer/issue_add.text.erb within layouts/mailer (1.0ms)
+  Rendered mailer/_issue.html.erb (2.0ms)
+  Rendered mailer/issue_add.html.erb within layouts/mailer (2.0ms)
+Redirected to http://localhost:3001/issues/2
+Completed 302 Found in 183326ms (ActiveRecord: 765.0ms)
+Started GET "/issues/2" for 127.0.0.1 at 2015-07-01 21:26:59 +0800
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"2"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (3.0ms)
+  Rendered issue_relations/_form.html.erb (1.0ms)
+  Rendered issues/_relations.html.erb (2.0ms)
+  Rendered issues/_action_menu.html.erb (3.0ms)
+  Rendered issues/_form_custom_fields.html.erb (0.0ms)
+  Rendered issues/_attributes.html.erb (13.0ms)
+  Rendered issues/_form.html.erb (26.0ms)
+  Rendered attachments/_form.html.erb (3.0ms)
+  Rendered issues/_edit.html.erb (36.0ms)
+  Rendered issues/_sidebar.html.erb (4.0ms)
+  Rendered watchers/_watchers.html.erb (4.0ms)
+  Rendered issues/show.html.erb within layouts/base (74.0ms)
+Completed 200 OK in 181ms (Views: 78.0ms | ActiveRecord: 33.0ms)
+Started GET "/projects/ogame/issues" for 127.0.0.1 at 2015-07-01 22:00:26 +0800
+Processing by IssuesController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (10.0ms)
+  Rendered queries/_columns.html.erb (2.0ms)
+  Rendered issues/_list.html.erb (8.0ms)
+  Rendered issues/_sidebar.html.erb (2.0ms)
+  Rendered issues/index.html.erb within layouts/base (30.0ms)
+Completed 200 OK in 129ms (Views: 87.0ms | ActiveRecord: 14.0ms)
+Started GET "/issues/2" for 127.0.0.1 at 2015-07-01 22:00:28 +0800
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"2"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (3.0ms)
+  Rendered issue_relations/_form.html.erb (1.0ms)
+  Rendered issues/_relations.html.erb (2.0ms)
+  Rendered issues/_action_menu.html.erb (2.0ms)
+  Rendered issues/_form_custom_fields.html.erb (0.0ms)
+  Rendered issues/_attributes.html.erb (14.0ms)
+  Rendered issues/_form.html.erb (30.0ms)
+  Rendered attachments/_form.html.erb (2.0ms)
+  Rendered issues/_edit.html.erb (40.0ms)
+  Rendered issues/_sidebar.html.erb (3.0ms)
+  Rendered watchers/_watchers.html.erb (5.0ms)
+  Rendered issues/show.html.erb within layouts/base (76.0ms)
+Completed 200 OK in 197ms (Views: 81.0ms | ActiveRecord: 29.0ms)
+Started GET "/issues/1" for 127.0.0.1 at 2015-07-01 22:00:30 +0800
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (5.0ms)
+  Rendered attachments/_links.html.erb (4.0ms)
+  Rendered issue_relations/_form.html.erb (1.0ms)
+  Rendered issues/_relations.html.erb (2.0ms)
+  Rendered issues/_action_menu.html.erb (4.0ms)
+  Rendered issues/_form_custom_fields.html.erb (0.0ms)
+  Rendered issues/_attributes.html.erb (12.0ms)
+  Rendered issues/_form.html.erb (24.0ms)
+  Rendered attachments/_form.html.erb (1.0ms)
+  Rendered issues/_edit.html.erb (32.0ms)
+  Rendered issues/_sidebar.html.erb (4.0ms)
+  Rendered watchers/_watchers.html.erb (5.0ms)
+  Rendered issues/show.html.erb within layouts/base (75.0ms)
+Completed 200 OK in 199ms (Views: 85.0ms | ActiveRecord: 24.0ms)
+Started GET "/attachments/1/cb0320dbs03s.jpg" for 127.0.0.1 at 2015-07-01 22:00:31 +0800
+Processing by AttachmentsController#show as HTML
+  Parameters: {"id"=>"1", "filename"=>"cb0320dbs03s.jpg"}
+  Current user: admin (id=1)
+Completed 304 Not Modified in 6ms (ActiveRecord: 1.0ms)
+Started GET "/issues/2" for 127.0.0.1 at 2015-07-01 22:00:52 +0800
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"2"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (3.0ms)
+  Rendered issue_relations/_form.html.erb (1.0ms)
+  Rendered issues/_relations.html.erb (2.0ms)
+  Rendered issues/_action_menu.html.erb (3.0ms)
+  Rendered issues/_form_custom_fields.html.erb (0.0ms)
+  Rendered issues/_attributes.html.erb (12.0ms)
+  Rendered issues/_form.html.erb (23.0ms)
+  Rendered attachments/_form.html.erb (2.0ms)
+  Rendered issues/_edit.html.erb (31.0ms)
+  Rendered issues/_sidebar.html.erb (4.0ms)
+  Rendered watchers/_watchers.html.erb (5.0ms)
+  Rendered issues/show.html.erb within layouts/base (67.0ms)
+Completed 200 OK in 178ms (Views: 73.0ms | ActiveRecord: 27.0ms)
+Started GET "/issues/1" for 127.0.0.1 at 2015-07-01 22:00:54 +0800
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (4.0ms)
+  Rendered attachments/_links.html.erb (3.0ms)
+  Rendered issue_relations/_form.html.erb (1.0ms)
+  Rendered issues/_relations.html.erb (1.0ms)
+  Rendered issues/_action_menu.html.erb (2.0ms)
+  Rendered issues/_form_custom_fields.html.erb (0.0ms)
+  Rendered issues/_attributes.html.erb (17.0ms)
+  Rendered issues/_form.html.erb (28.0ms)
+  Rendered attachments/_form.html.erb (1.0ms)
+  Rendered issues/_edit.html.erb (38.0ms)
+  Rendered issues/_sidebar.html.erb (3.0ms)
+  Rendered watchers/_watchers.html.erb (4.0ms)
+  Rendered issues/show.html.erb within layouts/base (71.0ms)
+Completed 200 OK in 246ms (Views: 77.0ms | ActiveRecord: 26.0ms)
+Started GET "/attachments/1/cb0320dbs03s.jpg" for 127.0.0.1 at 2015-07-01 22:00:55 +0800
+Processing by AttachmentsController#show as HTML
+  Parameters: {"id"=>"1", "filename"=>"cb0320dbs03s.jpg"}
+  Current user: admin (id=1)
+Completed 304 Not Modified in 7ms (ActiveRecord: 2.0ms)
+Started GET "/projects/ogame" for 127.0.0.1 at 2015-07-01 22:01:00 +0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered projects/_members_box.html.erb (1.0ms)
+  Rendered projects/show.html.erb within layouts/base (13.0ms)
+Completed 200 OK in 142ms (Views: 104.0ms | ActiveRecord: 18.0ms)
+Started GET "/projects/game_sub" for 127.0.0.1 at 2015-07-01 22:01:06 +0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"game_sub"}
+  Current user: admin (id=1)
+  Rendered projects/_members_box.html.erb (0.0ms)
+  Rendered projects/show.html.erb within layouts/base (5.0ms)
+Completed 200 OK in 94ms (Views: 67.0ms | ActiveRecord: 12.0ms)
+Started GET "/my/page" for 127.0.0.1 at 2015-07-01 22:01:26 +0800
+Processing by MyController#page as HTML
+  Current user: admin (id=1)
+  Rendered issues/_list_simple.html.erb (2.0ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (19.0ms)
+  Rendered issues/_list_simple.html.erb (4.0ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (15.0ms)
+  Rendered my/page.html.erb within layouts/base (36.0ms)
+Completed 200 OK in 143ms (Views: 33.0ms | ActiveRecord: 15.0ms)
+Started GET "/" for 127.0.0.1 at 2015-07-01 22:01:28 +0800
+Processing by WelcomeController#index as HTML
+  Current user: admin (id=1)
+  Rendered welcome/index.html.erb within layouts/base (5.0ms)
+Completed 200 OK in 70ms (Views: 60.0ms | ActiveRecord: 5.0ms)
+Started GET "/my/page" for 127.0.0.1 at 2015-07-01 22:01:37 +0800
+Processing by MyController#page as HTML
+  Current user: admin (id=1)
+  Rendered issues/_list_simple.html.erb (3.0ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (20.0ms)
+  Rendered issues/_list_simple.html.erb (4.0ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (19.0ms)
+  Rendered my/page.html.erb within layouts/base (42.0ms)
+Completed 200 OK in 109ms (Views: 35.0ms | ActiveRecord: 22.0ms)
+Started GET "/projects" for 127.0.0.1 at 2015-07-01 22:01:39 +0800
+Processing by ProjectsController#index as HTML
+  Current user: admin (id=1)
+  Rendered projects/index.html.erb within layouts/base (12.0ms)
+Completed 200 OK in 73ms (Views: 64.0ms | ActiveRecord: 6.0ms)
+Started GET "/projects/ogame" for 127.0.0.1 at 2015-07-01 22:01:50 +0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered projects/_members_box.html.erb (1.0ms)
+  Rendered projects/show.html.erb within layouts/base (5.0ms)
+Completed 200 OK in 99ms (Views: 70.0ms | ActiveRecord: 12.0ms)
+Started GET "/projects/ogame/issues/new" for 127.0.0.1 at 2015-07-01 22:01:52 +0800
+Processing by IssuesController#new as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered issues/_form_custom_fields.html.erb (3.0ms)
+  Rendered issues/_attributes.html.erb (16.0ms)
+  Rendered issues/_form.html.erb (29.0ms)
+  Rendered attachments/_form.html.erb (2.0ms)
+  Rendered issues/new.html.erb within layouts/base (33.0ms)
+Completed 200 OK in 129ms (Views: 89.0ms | ActiveRecord: 17.0ms)
+Started GET "/projects/ogame/issues" for 127.0.0.1 at 2015-07-01 22:01:53 +0800
+Processing by IssuesController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (9.0ms)
+  Rendered queries/_columns.html.erb (1.0ms)
+  Rendered issues/_list.html.erb (10.0ms)
+  Rendered issues/_sidebar.html.erb (3.0ms)
+  Rendered issues/index.html.erb within layouts/base (32.0ms)
+Completed 200 OK in 140ms (Views: 95.0ms | ActiveRecord: 19.0ms)
+Started GET "/issues/2" for 127.0.0.1 at 2015-07-01 22:01:54 +0800
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"2"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (4.0ms)
+  Rendered issue_relations/_form.html.erb (1.0ms)
+  Rendered issues/_relations.html.erb (2.0ms)
+  Rendered issues/_action_menu.html.erb (3.0ms)
+  Rendered issues/_form_custom_fields.html.erb (0.0ms)
+  Rendered issues/_attributes.html.erb (12.0ms)
+  Rendered issues/_form.html.erb (25.0ms)
+  Rendered attachments/_form.html.erb (1.0ms)
+  Rendered issues/_edit.html.erb (35.0ms)
+  Rendered issues/_sidebar.html.erb (4.0ms)
+  Rendered watchers/_watchers.html.erb (4.0ms)
+  Rendered issues/show.html.erb within layouts/base (74.0ms)
+Completed 200 OK in 188ms (Views: 79.0ms | ActiveRecord: 26.0ms)
+Started GET "/projects/ogame/settings" for 127.0.0.1 at 2015-07-01 22:02:15 +0800
+Processing by ProjectsController#settings as HTML
+  Parameters: {"id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered projects/_form.html.erb (12.0ms)
+  Rendered projects/_edit.html.erb (14.0ms)
+  Rendered projects/settings/_modules.html.erb (2.0ms)
+  Rendered projects/settings/_members.html.erb (14.0ms)
+  Rendered projects/settings/_versions.html.erb (3.0ms)
+  Rendered projects/settings/_issue_categories.html.erb (1.0ms)
+  Rendered projects/settings/_wiki.html.erb (2.0ms)
+  Rendered projects/settings/_repositories.html.erb (1.0ms)
+  Rendered projects/settings/_boards.html.erb (2.0ms)
+  Rendered projects/settings/_activities.html.erb (6.0ms)
+  Rendered common/_tabs.html.erb (49.0ms)
+  Rendered projects/settings.html.erb within layouts/base (49.0ms)
+Completed 200 OK in 129ms (Views: 102.0ms | ActiveRecord: 20.0ms)
+Started GET "/projects/ogame/versions/new?back_url=" for 127.0.0.1 at 2015-07-01 22:02:19 +0800
+Processing by VersionsController#new as HTML
+  Parameters: {"back_url"=>"", "project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered versions/_form.html.erb (10.0ms)
+  Rendered versions/new.html.erb within layouts/base (36.0ms)
+Completed 200 OK in 121ms (Views: 100.0ms | ActiveRecord: 8.0ms)
+Started POST "/projects/ogame/versions" for 127.0.0.1 at 2015-07-01 22:02:37 +0800
+Processing by VersionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B4rQoNg/Kz0dbFdVddVRmP6Kf8cq5g9RIsvAg2vMpAI=", "version"=>{"name"=>"7月版本", "description"=>"", "status"=>"open", "wiki_page_title"=>"", "effective_date"=>"2015-07-01", "sharing"=>"none"}, "commit"=>"创建", "project_id"=>"ogame"}
+  Current user: admin (id=1)
+Redirected to http://localhost:3001/projects/ogame/settings/versions
+Completed 302 Found in 37ms (ActiveRecord: 16.0ms)
+Started GET "/projects/ogame/settings/versions" for 127.0.0.1 at 2015-07-01 22:02:37 +0800
+Processing by ProjectsController#settings as HTML
+  Parameters: {"id"=>"ogame", "tab"=>"versions"}
+  Current user: admin (id=1)
+  Rendered projects/_form.html.erb (10.0ms)
+  Rendered projects/_edit.html.erb (12.0ms)
+  Rendered projects/settings/_modules.html.erb (2.0ms)
+  Rendered projects/settings/_members.html.erb (9.0ms)
+  Rendered projects/settings/_versions.html.erb (9.0ms)
+  Rendered projects/settings/_issue_categories.html.erb (2.0ms)
+  Rendered projects/settings/_wiki.html.erb (1.0ms)
+  Rendered projects/settings/_repositories.html.erb (2.0ms)
+  Rendered projects/settings/_boards.html.erb (2.0ms)
+  Rendered projects/settings/_activities.html.erb (8.0ms)
+  Rendered common/_tabs.html.erb (50.0ms)
+  Rendered projects/settings.html.erb within layouts/base (50.0ms)
+Completed 200 OK in 124ms (Views: 104.0ms | ActiveRecord: 13.0ms)
+Started GET "/projects/ogame/issues" for 127.0.0.1 at 2015-07-01 22:02:40 +0800
+Processing by IssuesController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (8.0ms)
+  Rendered queries/_columns.html.erb (2.0ms)
+  Rendered issues/_list.html.erb (8.0ms)
+  Rendered issues/_sidebar.html.erb (2.0ms)
+  Rendered issues/index.html.erb within layouts/base (28.0ms)
+Completed 200 OK in 187ms (Views: 142.0ms | ActiveRecord: 17.0ms)
+Started GET "/issues/2" for 127.0.0.1 at 2015-07-01 22:02:41 +0800
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"2"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (5.0ms)
+  Rendered issue_relations/_form.html.erb (1.0ms)
+  Rendered issues/_relations.html.erb (2.0ms)
+  Rendered issues/_action_menu.html.erb (2.0ms)
+  Rendered issues/_form_custom_fields.html.erb (0.0ms)
+  Rendered issues/_attributes.html.erb (15.0ms)
+  Rendered issues/_form.html.erb (28.0ms)
+  Rendered attachments/_form.html.erb (2.0ms)
+  Rendered issues/_edit.html.erb (38.0ms)
+  Rendered issues/_sidebar.html.erb (4.0ms)
+  Rendered watchers/_watchers.html.erb (4.0ms)
+  Rendered issues/show.html.erb within layouts/base (75.0ms)
+Completed 200 OK in 191ms (Views: 86.0ms | ActiveRecord: 25.0ms)
+Started GET "/issues/2" for 127.0.0.1 at 2015-07-01 22:02:52 +0800
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"2"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (4.0ms)
+  Rendered issue_relations/_form.html.erb (2.0ms)
+  Rendered issues/_relations.html.erb (2.0ms)
+  Rendered issues/_action_menu.html.erb (3.0ms)
+  Rendered issues/_form_custom_fields.html.erb (0.0ms)
+  Rendered issues/_attributes.html.erb (13.0ms)
+  Rendered issues/_form.html.erb (25.0ms)
+  Rendered attachments/_form.html.erb (1.0ms)
+  Rendered issues/_edit.html.erb (36.0ms)
+  Rendered issues/_sidebar.html.erb (3.0ms)
+  Rendered watchers/_watchers.html.erb (6.0ms)
+  Rendered issues/show.html.erb within layouts/base (73.0ms)
+Completed 200 OK in 236ms (Views: 75.0ms | ActiveRecord: 31.0ms)
+Started GET "/projects/ogame/issues" for 127.0.0.1 at 2015-07-01 22:07:34 +0800
+Processing by IssuesController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (8.0ms)
+  Rendered queries/_columns.html.erb (2.0ms)
+  Rendered issues/_list.html.erb (51.0ms)
+  Rendered issues/_sidebar.html.erb (3.0ms)
+  Rendered issues/index.html.erb within layouts/base (71.0ms)
+Completed 200 OK in 172ms (Views: 125.0ms | ActiveRecord: 21.0ms)
+Started GET "/issues/2" for 127.0.0.1 at 2015-07-01 22:07:43 +0800
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"2"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (4.0ms)
+  Rendered issue_relations/_form.html.erb (1.0ms)
+  Rendered issues/_relations.html.erb (2.0ms)
+  Rendered issues/_action_menu.html.erb (2.0ms)
+  Rendered issues/_form_custom_fields.html.erb (0.0ms)
+  Rendered issues/_attributes.html.erb (13.0ms)
+  Rendered issues/_form.html.erb (24.0ms)
+  Rendered attachments/_form.html.erb (2.0ms)
+  Rendered issues/_edit.html.erb (34.0ms)
+  Rendered issues/_sidebar.html.erb (4.0ms)
+  Rendered watchers/_watchers.html.erb (6.0ms)
+  Rendered issues/show.html.erb within layouts/base (71.0ms)
+Completed 200 OK in 196ms (Views: 75.0ms | ActiveRecord: 34.0ms)
+Started GET "/projects/ogame/issues/gantt" for 127.0.0.1 at 2015-07-01 22:07:46 +0800
+Processing by GanttsController#show as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (8.0ms)
+  Rendered issues/_sidebar.html.erb (3.0ms)
+  Rendered gantts/show.html.erb within layouts/base (58.0ms)
+Completed 200 OK in 186ms (Views: 61.0ms | ActiveRecord: 21.0ms)
+Started GET "/projects/ogame/roadmap" for 127.0.0.1 at 2015-07-01 22:07:52 +0800
+Processing by VersionsController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered versions/_overview.html.erb (3.0ms)
+  Rendered versions/index.html.erb within layouts/base (15.0ms)
+Completed 200 OK in 109ms (Views: 79.0ms | ActiveRecord: 13.0ms)
+Started GET "/projects/ogame/activity" for 127.0.0.1 at 2015-07-01 22:07:54 +0800
+Processing by ActivitiesController#index as HTML
+  Parameters: {"id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered activities/index.html.erb within layouts/base (13.0ms)
+Completed 200 OK in 151ms (Views: 85.0ms | ActiveRecord: 16.0ms)
+Started GET "/projects/ogame/roadmap" for 127.0.0.1 at 2015-07-01 22:07:57 +0800
+Processing by VersionsController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered versions/_overview.html.erb (2.0ms)
+  Rendered versions/index.html.erb within layouts/base (10.0ms)
+Completed 200 OK in 99ms (Views: 74.0ms | ActiveRecord: 13.0ms)
+Started GET "/projects/ogame/issues/new" for 127.0.0.1 at 2015-07-01 22:08:08 +0800
+Processing by IssuesController#new as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered issues/_form_custom_fields.html.erb (4.0ms)
+  Rendered issues/_attributes.html.erb (19.0ms)
+  Rendered issues/_form.html.erb (30.0ms)
+  Rendered attachments/_form.html.erb (2.0ms)
+  Rendered issues/new.html.erb within layouts/base (35.0ms)
+Completed 200 OK in 130ms (Views: 93.0ms | ActiveRecord: 22.0ms)
+Started GET "/projects/ogame/activity" for 127.0.0.1 at 2015-07-02 09:36:34 +0800
+Processing by ActivitiesController#index as HTML
+  Parameters: {"id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered activities/index.html.erb within layouts/base (11.0ms)
+Completed 200 OK in 117ms (Views: 65.0ms | ActiveRecord: 15.0ms)
+Started GET "/projects/ogame/roadmap" for 127.0.0.1 at 2015-07-02 09:36:34 +0800
+Processing by VersionsController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered versions/index.html.erb within layouts/base (4.0ms)
+Completed 200 OK in 78ms (Views: 59.0ms | ActiveRecord: 8.0ms)
+Started GET "/projects/ogame/issues" for 127.0.0.1 at 2015-07-02 09:36:37 +0800
+Processing by IssuesController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (7.0ms)
+  Rendered queries/_columns.html.erb (2.0ms)
+  Rendered issues/_list.html.erb (6.0ms)
+  Rendered issues/_sidebar.html.erb (3.0ms)
+  Rendered issues/index.html.erb within layouts/base (25.0ms)
+Completed 200 OK in 114ms (Views: 78.0ms | ActiveRecord: 14.0ms)
+Started GET "/projects/ogame/roadmap" for 127.0.0.1 at 2015-07-02 09:36:39 +0800
+Processing by VersionsController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered versions/index.html.erb within layouts/base (4.0ms)
+Completed 200 OK in 75ms (Views: 56.0ms | ActiveRecord: 11.0ms)
+Started GET "/projects/ogame/issues" for 127.0.0.1 at 2015-07-02 09:36:45 +0800
+Processing by IssuesController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (7.0ms)
+  Rendered queries/_columns.html.erb (1.0ms)
+  Rendered issues/_list.html.erb (6.0ms)
+  Rendered issues/_sidebar.html.erb (3.0ms)
+  Rendered issues/index.html.erb within layouts/base (26.0ms)
+Completed 200 OK in 121ms (Views: 82.0ms | ActiveRecord: 15.0ms)
+Started GET "/projects/ogame" for 127.0.0.1 at 2015-07-02 09:36:51 +0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered projects/_members_box.html.erb (1.0ms)
+  Rendered projects/show.html.erb within layouts/base (6.0ms)
+Completed 200 OK in 102ms (Views: 70.0ms | ActiveRecord: 10.0ms)
+Started GET "/projects/ogame/issues/calendar" for 127.0.0.1 at 2015-07-02 09:36:55 +0800
+Processing by CalendarsController#show as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (7.0ms)
+  Rendered common/_calendar.html.erb (14.0ms)
+  Rendered issues/_sidebar.html.erb (2.0ms)
+  Rendered calendars/show.html.erb within layouts/base (28.0ms)
+Completed 200 OK in 122ms (Views: 80.0ms | ActiveRecord: 15.0ms)
+Started GET "/projects/ogame/issues/gantt" for 127.0.0.1 at 2015-07-02 09:37:05 +0800
+Processing by GanttsController#show as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (7.0ms)
+  Rendered issues/_sidebar.html.erb (5.0ms)
+  Rendered gantts/show.html.erb within layouts/base (58.0ms)
+Completed 200 OK in 183ms (Views: 61.0ms | ActiveRecord: 18.0ms)
+Started GET "/projects/ogame/issues/gantt?month=7&months=6&year=2015&zoom=1" for 127.0.0.1 at 2015-07-02 09:37:12 +0800
+Processing by GanttsController#show as HTML
+  Parameters: {"month"=>"7", "months"=>"6", "year"=>"2015", "zoom"=>"1", "project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (8.0ms)
+  Rendered issues/_sidebar.html.erb (3.0ms)
+  Rendered gantts/show.html.erb within layouts/base (46.0ms)
+Completed 200 OK in 186ms (Views: 56.0ms | ActiveRecord: 29.0ms)
+Started GET "/projects/ogame/issues/gantt?month=7&months=6&year=2015&zoom=2" for 127.0.0.1 at 2015-07-02 09:37:14 +0800
+Processing by GanttsController#show as HTML
+  Parameters: {"month"=>"7", "months"=>"6", "year"=>"2015", "zoom"=>"2", "project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (8.0ms)
+  Rendered issues/_sidebar.html.erb (3.0ms)
+  Rendered gantts/show.html.erb within layouts/base (89.0ms)
+Completed 200 OK in 441ms (Views: 95.0ms | ActiveRecord: 242.0ms)
+Started GET "/projects/ogame/issues/calendar" for 127.0.0.1 at 2015-07-02 09:37:32 +0800
+Processing by CalendarsController#show as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered queries/_filters.html.erb (7.0ms)
+  Rendered common/_calendar.html.erb (52.0ms)
+  Rendered issues/_sidebar.html.erb (3.0ms)
+  Rendered calendars/show.html.erb within layouts/base (67.0ms)
+Completed 200 OK in 162ms (Views: 122.0ms | ActiveRecord: 15.0ms)
+Started GET "/projects/ogame/news" for 127.0.0.1 at 2015-07-02 09:37:34 +0800
+Processing by NewsController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered attachments/_form.html.erb (1.0ms)
+  Rendered news/_form.html.erb (3.0ms)
+  Rendered news/index.html.erb within layouts/base (8.0ms)
+Completed 200 OK in 78ms (Views: 61.0ms | ActiveRecord: 6.0ms)
+Started GET "/projects/ogame/documents" for 127.0.0.1 at 2015-07-02 09:37:35 +0800
+Processing by DocumentsController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered attachments/_form.html.erb (1.0ms)
+  Rendered documents/_form.html.erb (5.0ms)
+  Rendered documents/index.html.erb within layouts/base (8.0ms)
+Completed 200 OK in 82ms (Views: 63.0ms | ActiveRecord: 11.0ms)
+Started GET "/projects/ogame/wiki" for 127.0.0.1 at 2015-07-02 09:37:35 +0800
+Processing by WikiController#show as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered attachments/_form.html.erb (1.0ms)
+  Rendered wiki/edit.html.erb within layouts/base (6.0ms)
+Completed 200 OK in 75ms (Views: 59.0ms | ActiveRecord: 8.0ms)
+Started GET "/projects/ogame/files" for 127.0.0.1 at 2015-07-02 09:37:36 +0800
+Processing by FilesController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered files/index.html.erb within layouts/base (2.0ms)
+Completed 200 OK in 77ms (Views: 59.0ms | ActiveRecord: 9.0ms)
+Started GET "/projects/ogame/settings" for 127.0.0.1 at 2015-07-02 09:37:37 +0800
+Processing by ProjectsController#settings as HTML
+  Parameters: {"id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered projects/_form.html.erb (9.0ms)
+  Rendered projects/_edit.html.erb (11.0ms)
+  Rendered projects/settings/_modules.html.erb (2.0ms)
+  Rendered projects/settings/_members.html.erb (10.0ms)
+  Rendered projects/settings/_versions.html.erb (7.0ms)
+  Rendered projects/settings/_issue_categories.html.erb (1.0ms)
+  Rendered projects/settings/_wiki.html.erb (1.0ms)
+  Rendered projects/settings/_repositories.html.erb (1.0ms)
+  Rendered projects/settings/_boards.html.erb (2.0ms)
+  Rendered projects/settings/_activities.html.erb (6.0ms)
+  Rendered common/_tabs.html.erb (44.0ms)
+  Rendered projects/settings.html.erb within layouts/base (44.0ms)
+Completed 200 OK in 114ms (Views: 92.0ms | ActiveRecord: 18.0ms)
+Started GET "/versions/1" for 127.0.0.1 at 2015-07-02 09:37:46 +0800
+Processing by VersionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Current user: admin (id=1)
+  Rendered versions/_overview.html.erb (2.0ms)
+  Rendered versions/show.html.erb within layouts/base (10.0ms)
+Completed 200 OK in 87ms (Views: 70.0ms | ActiveRecord: 8.0ms)
+Started GET "/projects/ogame/roadmap" for 127.0.0.1 at 2015-07-02 09:37:52 +0800
+Processing by VersionsController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered versions/index.html.erb within layouts/base (4.0ms)
+Completed 200 OK in 85ms (Views: 64.0ms | ActiveRecord: 6.0ms)
+Started GET "/projects/ogame/roadmap?utf8=%E2%9C%93&tracker_ids%5B%5D=1&tracker_ids%5B%5D=2&tracker_ids%5B%5D=3&completed=1&with_subprojects=0&with_subprojects=1" for 127.0.0.1 at 2015-07-02 09:38:00 +0800
+Processing by VersionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "tracker_ids"=>["1", "2", "3"], "completed"=>"1", "with_subprojects"=>"1", "project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered versions/_overview.html.erb (3.0ms)
+  Rendered versions/index.html.erb within layouts/base (9.0ms)
+Completed 200 OK in 85ms (Views: 60.0ms | ActiveRecord: 15.0ms)
+Started GET "/projects/ogame/activity" for 127.0.0.1 at 2015-07-02 09:38:08 +0800
+Processing by ActivitiesController#index as HTML
+  Parameters: {"id"=>"ogame"}
+  Current user: admin (id=1)
+Completed 304 Not Modified in 32ms (ActiveRecord: 7.0ms)
+Started GET "/projects/ogame" for 127.0.0.1 at 2015-07-02 09:38:08 +0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered projects/_members_box.html.erb (1.0ms)
+  Rendered projects/show.html.erb within layouts/base (6.0ms)
+Completed 200 OK in 137ms (Views: 111.0ms | ActiveRecord: 8.0ms)
+Started GET "/my/page" for 127.0.0.1 at 2015-07-02 09:38:12 +0800
+Processing by MyController#page as HTML
+  Current user: admin (id=1)
+  Rendered issues/_list_simple.html.erb (1.0ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (16.0ms)
+  Rendered issues/_list_simple.html.erb (5.0ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (13.0ms)
+  Rendered my/page.html.erb within layouts/base (30.0ms)
+Completed 200 OK in 88ms (Views: 28.0ms | ActiveRecord: 13.0ms)
+Started GET "/my/page_layout" for 127.0.0.1 at 2015-07-02 09:38:18 +0800
+Processing by MyController#page_layout as HTML
+  Current user: admin (id=1)
+  Rendered issues/_list_simple.html.erb (1.0ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (15.0ms)
+  Rendered my/_block.html.erb (16.0ms)
+  Rendered issues/_list_simple.html.erb (4.0ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (13.0ms)
+  Rendered my/_block.html.erb (14.0ms)
+  Rendered my/page_layout.html.erb within layouts/base (35.0ms)
+Completed 200 OK in 94ms (Views: 33.0ms | ActiveRecord: 15.0ms)
+Started GET "/my/page" for 127.0.0.1 at 2015-07-02 09:38:28 +0800
+Processing by MyController#page as HTML
+  Current user: admin (id=1)
+  Rendered issues/_list_simple.html.erb (1.0ms)
+  Rendered my/blocks/_issuesassignedtome.html.erb (15.0ms)
+  Rendered issues/_list_simple.html.erb (4.0ms)
+  Rendered my/blocks/_issuesreportedbyme.html.erb (13.0ms)
+  Rendered my/page.html.erb within layouts/base (31.0ms)
+Completed 200 OK in 87ms (Views: 25.0ms | ActiveRecord: 18.0ms)
+Started GET "/issues/1" for 127.0.0.1 at 2015-07-02 09:38:35 +0800
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Current user: admin (id=1)
+  Rendered issues/_action_menu.html.erb (3.0ms)
+  Rendered attachments/_links.html.erb (3.0ms)
+  Rendered issue_relations/_form.html.erb (1.0ms)
+  Rendered issues/_relations.html.erb (2.0ms)
+  Rendered issues/_action_menu.html.erb (3.0ms)
+  Rendered issues/_form_custom_fields.html.erb (0.0ms)
+  Rendered issues/_attributes.html.erb (14.0ms)
+  Rendered issues/_form.html.erb (26.0ms)
+  Rendered attachments/_form.html.erb (1.0ms)
+  Rendered issues/_edit.html.erb (34.0ms)
+  Rendered issues/_sidebar.html.erb (3.0ms)
+  Rendered watchers/_watchers.html.erb (5.0ms)
+  Rendered issues/show.html.erb within layouts/base (68.0ms)
+Completed 200 OK in 176ms (Views: 78.0ms | ActiveRecord: 19.0ms)
+Started GET "/attachments/1/cb0320dbs03s.jpg" for 127.0.0.1 at 2015-07-02 09:38:35 +0800
+Processing by AttachmentsController#show as HTML
+  Parameters: {"id"=>"1", "filename"=>"cb0320dbs03s.jpg"}
+  Current user: admin (id=1)
+Completed 304 Not Modified in 7ms (ActiveRecord: 1.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+OpenIdAuthentication.store is nil. Using in-memory store.
+OpenIdAuthentication.store is nil. Using in-memory store.
+OpenIdAuthentication.store is nil. Using in-memory store.
+Creating scope :member_of. Overwriting existing method Principal.member_of.
+Creating scope :member_of. Overwriting existing method Principal.member_of.
+Creating scope :member_of. Overwriting existing method Principal.member_of.
+Creating scope :member_of. Overwriting existing method Principal.member_of.
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+OpenIdAuthentication.store is nil. Using in-memory store.
+OpenIdAuthentication.store is nil. Using in-memory store.
+OpenIdAuthentication.store is nil. Using in-memory store.
+Creating scope :member_of. Overwriting existing method Principal.member_of.
+Creating scope :member_of. Overwriting existing method Principal.member_of.
+Creating scope :member_of. Overwriting existing method Principal.member_of.
+Creating scope :member_of. Overwriting existing method Principal.member_of.
+Started GET "/" for 172.16.136.43 at 2015-08-11 16:49:24 +0800
+Processing by WelcomeController#index as HTML
+  Current user: anonymous
+  Rendered welcome/index.html.erb within layouts/base (664.0ms)
+Completed 200 OK in 2571ms (Views: 2200.1ms | ActiveRecord: 25.0ms)
