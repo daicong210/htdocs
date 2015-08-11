@@ -1,0 +1,17 @@
+#encoding:utf-8
+<h3 class="title"><%="新建绩效"%></h3>
+<% if @subject.new_record? then
+     url =project_performance_subjects_path(@project)
+     subject_type = params[:subject_type]
+   else
+     url =project_performance_subject_path(@project,@subject)
+     subject_type = @subject.subject_type
+   end
+%>
+<%= labelled_form_for @subject, :url => url, :remote => true do |f| %>
+<%= render :partial => 'performance_subjects/form', :locals => { :f => f } %>
+  <p class="buttons">
+    <%= submit_tag (@subject.new_record? ? l(:button_create) : l(:button_update)) , :name => nil,:subject_type=>subject_type %>
+    <%= submit_tag l(:button_cancel), :name => nil, :onclick => "hideModal(this);", :type => 'button' %>
+  </p>
+<% end %>

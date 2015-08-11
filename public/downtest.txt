@@ -1,0 +1,2 @@
+new_project_version_path(@project, :back_url => '')
+new_project_version_path(@issue.project),

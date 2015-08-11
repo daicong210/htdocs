@@ -1,0 +1,30 @@
+#encoding:utf-8
+<h1>编辑</h1>
+<%= form_for(@rank) do |f| %>
+    <% if @rank.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@rank.errors.count, "error") %> prohibited this rank from being saved:</h2>
+
+          <ul>
+            <% @rank.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="field">
+      <%= f.label :职位 %><br />
+      <%= f.text_field :name %>
+    </div>
+    <br>
+    <div class="actions">
+      <%= f.submit "更新" %>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <% if @project_name then%>
+          &nbsp;&nbsp;&nbsp;
+          <%= link_to '返回部门', "/projects/#{@project_name}/settings/department" %>
+      <% end %>
+    </div>
+    <%= hidden_field_tag :department_id, params[:department_id] %>
+<% end %>
+

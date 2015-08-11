@@ -1,0 +1,28 @@
+#encoding:utf-8
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>部门名:</b>
+  <%= @department.name %>
+</p>
+
+<p>
+  <b>所属部门:</b>
+  <% department = get_pre_deparetment(@department.pre_department_id)%>
+  <%= department.blank? ? "无":get_pre_deparetment(@department.pre_department_id).name %>
+</p>
+
+<p>
+  <b>所属项目:</b>
+  <%= @department.project.blank? ? "无" : @department.project.name %>
+</p>
+
+<%= link_to '编辑', edit_department_path(@department) %>
+<% if !@department.project_id.blank? then%>
+    &nbsp;&nbsp;&nbsp;
+    <%= link_to '继续创建', "/departments/new/#{@department.project_id}" %>
+<% end %>
+<% if @project_name then%>
+    &nbsp;&nbsp;&nbsp;
+    <%= link_to '返回部门', "/projects/#{@project_name}/settings/department" %>
+<% end %>

@@ -1,0 +1,37 @@
+#encoding:utf-8
+<% if @project.departments.any? %>
+    <table class="list">
+      <thead><tr>
+        <th><%= l(:label_department) %></th>
+        <th><%= l(:field_leader) %></th>
+        <th></th>
+        <th></th>
+      </tr></thead>
+      <tbody>
+      <% Department.department_tree(@project.departments) do |dept, level|
+        next if dept.new_record? %>
+          <tr class="<%= cycle 'odd', 'even' %>">
+            <td style="padding-left: <%= level * 18 %>px;"><%= link_to dept.name, project_department_path(@project, dept),:class=>class_for_dept(0) %></td>
+            <td align="center"><%= sanitize leaders_name(dept) %></td>
+            <td align="center">
+              <% if authorize_for("departments", "edit") %>
+                  <%= reorder_links('department', {:controller => 'departments', :action => 'update', :project_id => @project, :id => dept}, :put) %>
+              <% end %>
+            </td>
+            <td class="buttons">
+              <% if User.current.allowed_to?(:manage_departments, @project) %>
+                  <%= link_to l(:button_edit), edit_project_department_path(@project, dept), :class => 'icon icon-edit' %>
+                  <%= delete_link project_department_path(@project, dept) %>
+              <% end %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+<% else %>
+    <p class="nodata"><%= l(:label_no_data) %></p>
+<% end %>
+
+<% if User.current.allowed_to?(:manage_departments, @project) %>
+    <p><%= link_to l(:label_department_new), new_project_department_path(@project), :class => 'icon icon-add' %></p>
+<% end %>

@@ -1,0 +1,40 @@
+#encoding:utf-8
+<h1>编辑</h1>
+
+<%= form_for(@department_user) do |f| %>
+    <% if @department_user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@department_user.errors.count, "error") %> prohibited this department_user from being saved:</h2>
+
+          <ul>
+            <% @department_user.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :部门 %><br />
+      <%= f.select :department_id, department_list_options(@department_id),include_blank: false%>
+    </div>
+    <div class="field">
+      <%=f.label :用户 %><br />
+      <% #=f.text_field :user_id%>
+      <% str = "#{@department_user.user.firstname}#{@department_user.user.lastname}"%>
+      <%= f.select :user_id, [[str,@department_user.user_id]],include_blank: false%>
+    </div>
+    <div class="field">
+      <%= f.label :职位 %><br />
+      <%= f.select :rank_id, rank_list_options(),include_blank: false%>
+    </div>
+    <br>
+    <div class="actions">
+      <%= f.submit :更新%>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <%= link_to '返回', department_users_path %>
+    </div>
+    <%= hidden_field_tag :department_id,params[:department_id]%>
+<% end %>
+
+

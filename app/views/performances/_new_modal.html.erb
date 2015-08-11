@@ -1,0 +1,13 @@
+#encoding:utf-8
+<h3 class="title"><%="批量导出"%></h3>
+  <%  @departments.any? %>
+      <%= form_for(:performance, :url=>{:action=>'send_excels'}, :remote => true, :method => :post) do |f| %>
+        <%= select_date Date.current,{:discard_day=>true}%><br><br>
+          <fieldset><legend><%="选择部门"%></legend>
+            <div id="principals">
+              <%= departments_check_box_tags 'departments[]', @departments%>
+            </div>
+            <br><br><br>
+            <p><%= submit_tag "导出", :id => 'member-add-submit' %></p>
+          </fieldset>
+  <% end %>

@@ -1,0 +1,80 @@
+#encoding:utf-8
+<h2 class="icon icon-dept1"> <%=h @department.name %></h2>
+<div class="tab-content" id="tab-content-members">
+  <%= error_messages_for 'member' %>
+  <% members = @members%>
+
+  <div class="splitcontentleft">
+    <% if @members.any? %>
+        <table class="list members">
+          <thead><tr>
+            <th><%= l(:label_member) %> </th>
+            <th><%= l(:field_leader) %></th>
+            <th style="width:25%"></th>
+          </tr></thead>
+          <tbody>
+          <% @members.each do |member| %>
+              <% next if member.new_record? %>
+              <tr id="member-<%= member.id %>" class="<%= cycle 'odd', 'even' %> member">
+                <td  align="center" class="users"><span  <%=sanitize user_is_leader?(member) ? "class= 'icon icon-style icon-leader'" : "class= 'icon icon-style icon-normal-user'" %> ><%= get_user_full_name(member) %></span ></td>
+                <td  align="center" class="roles">
+                <span id="member-<%= member.id %>-ranks" >
+                  <span id="member-<%= member.id %>-ranks-img"  style = "display: <%= user_is_leader?(member) ? 'inline' : 'none' %>"><%= checked_image %></span>
+                </span>
+                  <%= form_for(member, {:remote => true, :url =>project_department_member_path(@project,member) ,
+                                        :method => :put,
+                                        :html => { :id => "member-#{member.id}-ranks-form", :class => 'hol' }}
+                      ) do |f| %>
+                      <% ranks = rank_radio_button_for_select(member) %>
+                      <p> <% ranks.each do |rank| %>
+                            <label><%= f.radio_button :leader, rank[:id],:checked=>rank[:checked]%> <%= rank[:name] %></label>&nbsp;&nbsp;&nbsp;
+                        <% end %></p>
+                      <p><%= submit_tag l(:button_change), :class => "small" %>
+                        <%= link_to_function l(:button_cancel),
+                                             "$('#member-#{member.id}-ranks').show(); $('#member-#{member.id}-ranks-form').hide(); return false;"
+                        %></p>
+                  <% end %>
+                </td>
+                <td class="buttons">
+                  <%= link_to_function l(:button_edit),
+                                       "$('#member-#{member.id}-ranks').hide(); $('#member-#{member.id}-ranks-form').show(); return false;",
+                                       :class => 'icon icon-edit' %>
+                  <%= delete_link project_department_member_path(@project,member),
+                                  :remote => true  %>
+                </td>
+
+              </tr>
+          <% end; reset_cycle %>
+          </tbody>
+        </table>
+        <p class="pagination"><%= pagination_links_full @members_pages, @members_count %></p>
+    <% else %>
+        <p class="nodata"><%= l(:label_no_data) %></p>
+    <% end %>
+    <%= link_to l(:button_back), settings_project_path(@project, :tab => 'departments') %>
+  </div>
+
+  <% principals = Principal.active.not_member_of_department(@project).all(:limit => 100, :order => 'type, login, lastname ASC') %>
+
+  <div class="splitcontentright">
+    <% ranks = rank_radio_button_for_select(nil) %>
+    <% if ranks.any? && principals.any? %>
+        <%= form_for(@member, {:url => project_department_members_path(@project,@member), :remote => true, :method => :post}) do |f| %>
+            <fieldset><legend><%=l(:label_member_new)%></legend>
+              <p><%= label_tag "principal_search", l(:label_principal_search) %><%= text_field_tag 'principal_search', nil %></p>
+              <%= javascript_tag "observeSearchfield('principal_search', 'principals', '#{ escape_javascript autocomplete_project_department_members_path(@project) }')" %>
+
+              <div id="principals">
+                <%= principals_check_box_tags 'members[user_ids][]', principals %>
+              </div>
+              <%= hidden_field_tag :department_id, params[:department_id] %>
+              <p><%= l(:label_role_plural) %>:
+                <% ranks.each do |rank| %>
+                    <label><%= radio_button_tag 'leader', rank[:id], rank[:checked] %> <%= rank[:name] %></label>
+                <% end %></p>
+              <p><%= submit_tag l(:button_add), :id => 'member-add-submit' %></p>
+            </fieldset>
+        <% end %>
+    <% end %>
+  </div>
+</div>

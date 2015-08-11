@@ -1,0 +1,113 @@
+#encoding:utf-8
+class DepartmentUsersController < ApplicationController
+  #验证管理员权限
+  before_filter :require_admin
+
+  # GET /department_users
+  # GET /department_users.json
+  def index
+    @department_users = DepartmentUser.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @department_users }
+    end
+  end
+
+  # GET /department_users/1
+  # GET /department_users/1.json
+  def show
+    @department_user = DepartmentUser.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @department_user }
+    end
+  end
+
+  def show_members
+    #@department_users = DepartmentUser.all
+    @project_name = "ogame"
+    @department_users = DepartmentUser.find_all_by_department_id(params[:department_id])
+    @department_id = params[:department_id]
+    @department_name = Department.find_by_id(@department_id)
+    @department_name = @department_name["name"]
+    @rank = Rank.all
+    respond_to do |format|
+      if @rank.any? then
+        format.html
+        format.json { render json: @department_users }
+      else
+        url = "#{new_rank_path}/#{@department_id}"
+        format.html { redirect_to url,alert: '没有任何职位可选，无法向部门添加人员，请先录入职位！'  }
+        format.json { render json: @department_users }
+      end
+    end
+  end
+
+  # GET /department_users/new
+  # GET /department_users/new.json
+  def new
+    @department_user = DepartmentUser.new
+    @department_id = params[:department_id]
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @department_user }
+    end
+  end
+
+  # GET /department_users/1/edit
+  def edit
+    @department_user = DepartmentUser.find(params[:id])
+    @department_id = params[:department_id]
+  end
+
+  # POST /department_users
+  # POST /department_users.json
+  def create
+    @department_user = DepartmentUser.new(params[:department_user])
+    @department_id = params[:department_user][:department_id]
+    success_link = "/department_users/show_members/#{@department_id}"
+    respond_to do |format|
+      if @department_user.save
+        format.html { redirect_to success_link, notice: '添加人员成功！' }
+        format.json { render json: @department_user, status: :created, location: @department_user }
+      else
+        format.html { render :action => "new"}
+        format.json { render json: @department_user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /department_users/1
+  # PUT /department_users/1.json
+  def update
+    @department_user = DepartmentUser.find(params[:id])
+    @department_id = params[:department_id]
+    respond_to do |format|
+      if @department_user.update_attributes(params[:department_user])
+        str = "用户：#{@department_user.user.firstname}#{@department_user.user.lastname}  更新成功."
+        url = {:controller=>"department_users",:action=>"show_members",:department_id=>@department_id}
+        format.html { redirect_to url, notice: str }
+        format.json { head :no_content }
+      else
+        url = {:controller=>"department_users",:action=>"edit",:department_id=>@department_id}
+        format.html { redirect_to url }
+        format.json { render json: @department_user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /department_users/1
+  # DELETE /department_users/1.json
+  def destroy
+    @department_user = DepartmentUser.find(params[:id])
+    @department_id = @department_user.department_id
+    @department_user.destroy
+    url = "#{department_users_url}/show_members/#{@department_id}"
+    respond_to do |format|
+      format.html { redirect_to url }
+      format.json { head :no_content }
+    end
+  end
+end

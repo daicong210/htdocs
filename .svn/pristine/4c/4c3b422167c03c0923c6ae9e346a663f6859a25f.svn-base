@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @department_user.id %>
+</p>
+
+<p>
+  <b>Department:</b>
+  <%= @department_user.department_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @department_user.user_id %>
+</p>
+
+<p>
+  <b>Rank:</b>
+  <%= @department_user.rank_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_department_user_path(@department_user) %> |
+<%= link_to 'Back', department_users_path %>

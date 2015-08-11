@@ -1,0 +1,49 @@
+require 'test_helper'
+
+class DepartmentUsersControllerTest < ActionController::TestCase
+  setup do
+    @department_user = department_users(:one)
+  end
+
+  test "should get index" do
+    get :index
+    assert_response :success
+    assert_not_nil assigns(:department_users)
+  end
+
+  test "should get new" do
+    get :new
+    assert_response :success
+  end
+
+  test "should create department_user" do
+    assert_difference('DepartmentUser.count') do
+      post :create, department_user: { department_id: @department_user.department_id, id: @department_user.id, rank_id: @department_user.rank_id, user_id: @department_user.user_id }
+    end
+
+    assert_redirected_to department_user_path(assigns(:department_user))
+  end
+
+  test "should show department_user" do
+    get :show, id: @department_user
+    assert_response :success
+  end
+
+  test "should get edit" do
+    get :edit, id: @department_user
+    assert_response :success
+  end
+
+  test "should update department_user" do
+    put :update, id: @department_user, department_user: { department_id: @department_user.department_id, id: @department_user.id, rank_id: @department_user.rank_id, user_id: @department_user.user_id }
+    assert_redirected_to department_user_path(assigns(:department_user))
+  end
+
+  test "should destroy department_user" do
+    assert_difference('DepartmentUser.count', -1) do
+      delete :destroy, id: @department_user
+    end
+
+    assert_redirected_to department_users_path
+  end
+end

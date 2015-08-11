@@ -1,0 +1,26 @@
+#encoding:utf-8
+<%= back_url_hidden_field_tag %>
+<%= error_messages_for 'subject' %>
+<% subject = @subject.subject_type.blank? ? params[:subject_type] :@subject.subject_type %>
+<% max_score = get_score_max(session[:performance_id],subject) %>
+<% curscore = @socre %>
+<% if !curscore.blank? then max_score>=0 ? max_score=(curscore+max_score):max_score=curscore end %>
+<div class="box tabular">
+  <%=  f.hidden_field :performance_id,:value=>  @subject.performance_id.blank? ? session[:performance_id] :@subject.performance_id %>
+  <table>
+  <tr>
+    <td style="padding-left: 59px;"><%= f.select :priority_id, (@priorities.collect {|p| [p.name, p.id]}), {:required => true}  %></td>
+    <td style="padding-left: 78px;"><%= f.select :subject_type,subject_type_options(params[:subject_type]), {:required => true} %></td>
+    <% if can_modify_score? %>
+    <td style="padding-left: 40px;"><%= f.text_field :score,:size => 10,:maxlength=>3,:max=>max_score,:style=>"width: 72px; display: inline-block; ",
+                                                         :onkeyup=>"JHshNumberText(this)"%></td>
+    <td style="padding-left: 60px;"><%= f.text_field :leader_mark,:size => 30,:max=>max_score,:maxlength=>3,:style=>"width: 82px; display: inline-block; ",
+                                                          :onkeyup=>"JHshNumberText(this)"%></td>
+    <%end%>
+    </tr>
+  </table>
+  <p style="padding-left: 60px;"><%= f.text_area :subject, :rows => 7, :cols => 66,:required => true,:maxlength=>1024 %></p>
+  <p style="padding-left: 60px;"><%= f.text_area :aim, :rows => 7, :cols => 66,:required => subject.to_s==1.to_s ? true:false,:maxlength=>1024 %></p>
+  <p style="padding-left: 60px;"><%= f.text_area :comment,:rows => 7, :cols => 66,:maxlength=>1024%></p>
+  <p style="padding-left: 60px;"><%= f.text_area :assessment,:rows => 7, :cols => 66,:maxlength=>1024%></p>
+</div>

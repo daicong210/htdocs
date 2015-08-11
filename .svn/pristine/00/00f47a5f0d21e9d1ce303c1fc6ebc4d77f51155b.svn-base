@@ -1,0 +1,40 @@
+#encoding:utf-8
+<h1>编辑部门</h1>
+
+<% #render 'form' %>
+
+<%= form_for(@department) do |f| %>
+    <% if @department.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@department.errors.count, "error") %>无法保存</h2>
+
+          <ul>
+            <% @department.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="field">
+      <%= f.label :部门名称 %><br />
+      <%= f.text_field :name %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.label :所属项目 %><br />
+      <%= f.select :project_id, project_list_options(@department.project_id),include_blank: false%>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.label :所属部门 %><br />
+      <%= f.select :pre_department_id, department_list_options(@department.pre_department_id),include_blank: true%>
+    </div>
+    <br>
+    <div class="actions">
+      <%= f.submit :更新%>
+    </div>
+<% end %>
+<br>
+<% if @project_name then%>
+    <%= link_to '返回', "/projects/#{@project_name}/settings/department" %>
+<% end %>

@@ -1,0 +1,25 @@
+module DepartmentUsersHelper
+
+  def user_list_options(department_id)
+    if department_id.blank? then
+      #Project.all.map{|c| [c.name, c.id]}
+      return nil
+    else
+      sql = "select * from users where id not in( select user_id from department_users where department_id = #{department_id}) and type = 'User'"
+      DepartmentUser.find_by_sql(sql).map{|c| ["#{c.firstname}#{c.lastname}", c.id]}
+    end
+  end
+
+  def department_list_options(id)
+      if !id.blank? then
+        Department.find_all_by_id(id).map{|c| [c.name, c.id]}
+      else
+        return nil
+      end
+  end
+
+  def rank_list_options()
+       Rank.all.map{|c| [c.name, c.id]}
+  end
+
+end

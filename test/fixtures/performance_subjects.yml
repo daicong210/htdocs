@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  subject: MyString
+  priority_id: 1
+  aim: MyString
+  comment: MyString
+  assessment: MyString
+  score: 1
+  leader_mark: 1
+  type: 1
+
+two:
+  subject: MyString
+  priority_id: 1
+  aim: MyString
+  comment: MyString
+  assessment: MyString
+  score: 1
+  leader_mark: 1
+  type: 1

@@ -1,0 +1,34 @@
+#encoding:utf-8
+class Performance < ActiveRecord::Base
+  attr_accessible :date, :department_member_id, :leader_assessment, :leader_mark, :leader_rating, :project_id, :self_assessment, :status, :user_id
+  belongs_to :department_member,:foreign_key => 'department_member_id'
+  belongs_to :project
+  has_many :performance_subjects, :foreign_key => "performance_id", :dependent => :destroy
+  validates_uniqueness_of :date, :scope => :user_id,:message => "：此月份的绩效已经存在！"
+  after_save :add_team_subject, :add_key_subject
+
+  #增加默认团队精神
+  def add_team_subject
+    new_team_subject = self.performance_subjects.new
+    new_team_subject.subject_type = 2
+    new_team_subject.score = 20
+    new_team_subject.subject = "1、执行力。\n2、积极主动性。"
+    new_team_subject.aim = "1、各类规章命令的执行情况。\n2、主动、有效的反馈沟通，主动奉献，多做一点，多走一步。"
+    new_team_subject.save
+  end
+
+  #给主管增加默认关键绩效
+  def add_key_subject
+#    my = self.user_id == User.current.id
+    leader = self.department_member.leader
+    if leader
+      new_team_subject = self.performance_subjects.new
+      new_team_subject.subject_type = 1
+      new_team_subject.score = 30
+      new_team_subject.subject = "团队管理和任务推进"
+      new_team_subject.aim = "1、小组计划管理。\n2、小组质量管理。\n3、小组团队意识及产品意识管理"
+      new_team_subject.save
+    end
+  end
+end
+

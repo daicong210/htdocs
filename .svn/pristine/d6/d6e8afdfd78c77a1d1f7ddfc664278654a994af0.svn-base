@@ -1,0 +1,10 @@
+#encoding:utf-8
+<p id="notice"><%= notice %></p>
+<p>
+  <b>职位:</b>
+  <%= @rank.name %>
+</p>
+
+
+<%= link_to '编辑', edit_rank_path(@rank) %> |
+<%= link_to '返回', ranks_path %>

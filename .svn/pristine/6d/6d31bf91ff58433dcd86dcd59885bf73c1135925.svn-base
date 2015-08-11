@@ -1,0 +1,110 @@
+#encoding:utf-8
+module DepartmentsHelper
+  # 获取指定项目的顶级部门信息
+  def get_department_top (project_id)
+    #找出对应项目的所有部门信息
+    #departmentInfo = Department.find_all_by_project_id(project_id)
+
+    #统计不重复的列
+    deep = Department.count_by_sql("select count(pre_department_id) from departments where project_id = #{project_id}")
+    department_top = Department.find_all_by_project_id_and_pre_department_id(project_id,nil)
+    return deep,department_top
+  end
+
+  #获取部门的直属子部门
+  def get_department_sub(id)
+    sub_departments = Array.new(0)
+    #所有下级部门
+    if id.blank? then
+      return sub_departments
+    end
+    tmp = Department.find_all_by_pre_department_id(id)
+    if tmp.any? then
+      sub_departments = sub_departments|tmp
+      tmp.each do |value|
+        sub_departments = sub_departments|get_department_sub(value.id)
+      end
+    end
+    return sub_departments
+  end
+
+  #获取部门的直属子部门
+  def get_next_sub(id)
+    sub_departments = Array.new(0)
+    #所有下级部门
+    if id.blank? then
+      return sub_departments
+    end
+    sub_departments = Department.find_all_by_pre_department_id(id)
+    return sub_departments
+  end
+
+  #获取项目所有部门
+  def get_department_by_project_id(projectid)
+    Department.find_all_by_project_id(projectid)
+  end
+
+  def get_column_name_by_id(className,department_id)
+    if department_id.blank? || className.blank? then
+      return "无"
+    end
+    name = "无"
+    tmp = className.find_by_id(department_id)
+    if tmp.blank? then
+      name = "无"
+    else
+      name = tmp.name
+    end
+  end
+
+  #获取所有项目
+  def get_projects
+    return Project.all
+  end
+
+  #获取所有部门
+  def get_departments
+    return Department.all
+  end
+
+  #获取所有的直属上级部门
+  def  get_all_parent_department(pre_department_id)
+    department = Array.new(0)
+    tmp = Department.find_all_by_id(pre_department_id)
+    department = department|tmp
+    if tmp.blank? then
+      return department
+    end
+    tmp.each do |value|
+      if !value.pre_department_id.blank? then
+        department =department|get_all_parent_department(value.pre_department_id)
+      end
+    end
+    return department
+  end
+  #获取除子部门的所有部门
+  def get_all_partment_except_sub(pre_department_id)
+    return get_departments() - get_department_sub(pre_department_id)
+  end
+
+  def department_list_options(pre_department_id)
+    if !pre_department_id.blank? then
+      department = get_all_partment_except_sub(pre_department_id)
+      department.map{|c| [c.name, c.id]}
+    else
+      Department.all.map{|c| [c.name, c.id]}
+    end
+  end
+
+  def project_list_options(id)
+    if id.blank? then
+      Project.all.map{|c| [c.name, c.id]}
+    else
+      Project.find_all_by_id(id).map{|c| [c.name, c.id]}
+    end
+  end
+
+  def get_pre_deparetment(pre_department_id)
+      Department.find_by_id(pre_department_id)
+  end
+end

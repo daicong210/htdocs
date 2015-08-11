@@ -1,0 +1,11 @@
+#encoding:utf-8
+class DepartmentUser < ActiveRecord::Base
+  attr_accessible :department_id, :id, :rank_id, :user_id
+  validates_presence_of(:department_id,:message => "部门不能修改！")
+  validates_presence_of(:rank_id,:message => "职位不能为空！")
+  validates_presence_of(:user_id,:message => "用户不能为空！")
+
+  belongs_to(:department,:class_name=>"Department",:foreign_key=>"department_id")
+  belongs_to(:user,:class_name=>"User",:foreign_key=>"user_id")
+  belongs_to(:rank,:class_name=>"Rank",:foreign_key=>"rank_id")
+end

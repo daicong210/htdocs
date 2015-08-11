@@ -1,0 +1,161 @@
+#encoding:utf-8
+include DepartmentsHelper
+module PerformancesHelper
+  PerformancesStatus = %w(新建 确认 审批 归档)
+  #获取当前部门下属
+  def get_members_options(department_id)
+    if department_id.blank?
+      return nil
+    end
+    department_users = DepartmentMember.find_all_by_department_id(department_id)
+    department_users.map{|c|
+      if c.user_id then
+        user = User.find_by_id(c.user_id)
+        if user then
+          ["#{user.firstname}#{user.lastname}",user.id]
+        end
+      end
+    }
+  end
+  #获取所有下属
+  def get_sub_members_options(department_id)
+    user = User.current
+    if department_id == nil then
+      return nil
+    end
+    if  user.blank? || user.id.blank? ||department_id.blank? then
+      return nil
+    else
+      department_user = DepartmentMember.find_by_user_id(user.id)
+      if department_user.blank? || department_user.department_id.blank? then
+        return nil
+      end
+      options =[]
+      options=options|get_members_options(department_id)
+      sub_departments = get_department_sub(department_user.department_id)
+      sub_departments.each do|value|
+        options = options|get_members_options(value.id)
+      end
+      options
+    end
+  end
+
+  def users_for_performance_options(department_member)
+      options = []
+      id,name = get_current_user_name
+      options<<[name,id]
+      if !department_member.leader then
+        return options
+      end
+      get_sub_members_options(department_member.department_id)
+  end
+  #获取状态选项
+  def get_performance_status_options()
+    options = []
+    PerformancesStatus.each_index {|x| options<<[PerformancesStatus[x],x] }
+    return options
+  end
+  #获取绩效状态
+  def get_performance_status(performance)
+    if performance.blank? || performance.status.blank? then
+      return "无状态"
+    end
+    PerformancesStatus[performance.status]
+  end
+  #获取月份
+
+  #获取评级
+  def get_performance_rating(performance)
+    if performance.blank? || performance.leader_rating.blank? then
+      return ""
+    end
+    performance.leader_rating
+  end
+  #获取部门
+  def get_performance_department_name(performance)
+    if performance.blank? || performance.department_member_id.blank? then
+      return "无部门"
+    end
+    department_member = DepartmentMember.find_by_id(performance.department_member_id)
+    if department_member.blank? || department_member.department_id.blank? then
+      return "无部门"
+    end
+    department = Department.find_by_id(department_member.department_id)
+    department.name
+  end
+  #获取成员
+  def get_performance_user_name(user_id)
+    if user_id.blank? then
+      return "无名"
+    end
+    user = User.find_by_id(user_id)
+    "#{user.firstname}#{user.lastname}"
+  end
+  #获取日期
+  def get_performance_date_month(performance)
+    if performance.blank? || performance.date.blank? then
+      return "无"
+    end
+    performance.date.strftime("%y年%m月")
+  end
+  #获取某个用户的所属部门信息
+  def get_user_department(project_id, user_id)
+    if project_id.blank? || user_id.blank? then
+      return nil
+    end
+    DepartmentMember.find_by_sql("select * from department_members where department_id in(select id from departments where project_id = #{project_id}) and user_id = #{user_id}")
+  end
+  #是否能够修改自我评价
+  def can_modify_self_assessment(performance)
+    if User.current.admin?
+      return  true
+    end
+    if performance.blank? then
+      return false
+    end
+    my = performance.user_id == User.current.id
+    leader = performance.department_member.leader
+    status = performance.status
+    if leader then #领导
+        if status !=3 then
+          return true
+        else
+          return false
+        end
+    else#非领导
+      if my then
+        if status ==0 || status == 1 then
+          return true
+        else
+          return false
+        end
+      else
+        return false
+      end
+    end
+  end
+
+  def get_performances_lsit
+     if User.current.admin?
+       return Performance.find_by_sql("select * from #{Performance.table_name} ORDER by date desc")
+     end
+     department_member = DepartmentMember.find_by_user_id(User.current.id)
+     if department_member.blank?
+       return nil
+     end
+     sql = "select * from #{Performance.table_name} where user_id = #{User.current.id} ORDER by date desc"
+     list = Performance.find_by_sql(sql)
+
+     #是领导就显示所有下属成员的
+     if department_member.leader? then
+       options = get_sub_members_options(department_member.department_id)
+       options.each do|value|
+         performances = Performance.find_by_sql("select * from #{Performance.table_name} where user_id = #{value[1]} ORDER by date desc")
+         #if !performances.blank? then
+         list= list|performances
+         #end
+       end
+     end
+     list
+  end
+end

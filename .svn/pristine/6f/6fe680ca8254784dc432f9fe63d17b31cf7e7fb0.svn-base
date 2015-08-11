@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 
+  project_id: 
+  pre_department_id: 
+  name: 
+  sort_id: 
+
+two:
+  id: 
+  project_id: 
+  pre_department_id: 
+  name: 
+  sort_id: 

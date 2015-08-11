@@ -1,0 +1,7 @@
+class DepartmentMember < ActiveRecord::Base
+  include Redmine::SafeAttributes
+  belongs_to :department
+  belongs_to :user, :foreign_key => 'user_id'
+
+  safe_attributes 'user_id', 'department_id'
+end

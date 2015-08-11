@@ -1,0 +1,45 @@
+#encoding:utf-8
+<%= error_messages_for 'member' %>
+<%= stylesheet_link_tag 'department/jquery.treeview.css', :media => 'all' %>
+<%= javascript_include_tag'department/demo', 'department/jquery','department/jquery.treeview.async','department/jquery.treeview.edit'%>
+<%= javascript_include_tag'department/jquery.treeview', 'department/jquery.treeview.sortable','department/jquery.cookie'%>
+<% roles = Role.find_all_givable
+   departments = get_department_by_project_id(@project_id)
+   members = @project.member_principals.find(:all, :include => [:roles, :principal]).sort %>
+
+<div class="department_tree">
+    <div class="submunu">
+    <% if @department_top.any? %>
+      <ul id="browser" class="filetree">
+        <%=sanitize deparetment_dir(@department_top) %>
+      </ul>
+    <% end %>
+    </div>
+  <% # link_to '增加部门', new_department_path %>
+  <%= link_to "增加部门", {:controller => "departments", :action => "new",:project_id=>@project_id},:class => 'icon icon-add'  %>
+</div>
+<div class="department_add">
+  <% if departments.any? %>
+      <table class="list members">
+        <thead><tr>
+          <th style = "text-align: left">部门</th>
+          <th style="width:15%;text-align: left">所属部门</th>
+          <th>操作</th>
+        </tr></thead>
+        <tbody>
+        <% departments.each do |dep| %>
+             <tr id="member-1" class="<%= cycle 'odd', 'even' %> member">
+               <td><%= dep.name %></td>
+               <td><%= get_column_name_by_id(Department,dep.pre_department_id) %></td>
+               <td class="buttons">
+                 <a class="icon icon-edit" rel="nofollow"><%= link_to '编辑', edit_department_path(dep) %></a>
+                 <a class="icon icon-del" rel="nofollow"><%= link_to '删除', dep, method: :delete, data: { confirm: '删除部门会删除所有相关部门和人员，确定删除?' } %></a>
+               </td>
+            </tr>
+        <% end; reset_cycle %>
+        </tbody>
+      </table>
+  <% else %>
+      <p class="nodata"><%= l(:label_no_data) %></p>
+  <% end %>
+</div>

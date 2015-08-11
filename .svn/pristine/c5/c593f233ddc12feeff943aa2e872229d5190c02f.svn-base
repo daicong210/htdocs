@@ -1,0 +1,43 @@
+#encoding:utf-8
+<div id ="tab-performacne-list">
+    <% if @performance.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@performance.errors.count, "error") %> prohibited this performance from being saved:</h2>
+        <ul>
+          <% @performance.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <h1 align="center"><%=@project.name %>月度考核表</h1>
+    <% if @performance.new_record? then url =project_performances_path(@project) else url =project_performance_path(@project,@performance) end %>
+    <%= form_for(@performance,:url=>url) do |f| %>
+        <div class="box">
+          <div id="all_attributes">
+            <div id="attributes" >
+              <div class="splitcontent">
+                <% isNew = @performance.new_record? %>
+                <% inputstyle ="border:1px;border-bottom-style:none;border-top-style:none;border-left-style:none;border-right-style:none;width:100%;height:100%" %>
+                <% inputstyle2 ="outline:0;border:1px;border-bottom-style:none;border-top-style:none;border-left-style:none;border-right-style:none;width:70%;height:100%" %>
+                <% inputstyle3 ="padding:0px;outline:0;border:1px;border-bottom-style:none;border-top-style:none;border-left-style:none;border-right-style:none;width:100%;height:100%" %>
+
+                <% if isNew %>
+                    <%= render :partial =>'performances/new',:locals => {:f=>f,:inputstyle=>inputstyle,:inputstyle3=>inputstyle3} %>
+                <% else %>
+                    <%= render :partial =>'performances/update',:locals => {:f=>f,:inputstyle=>inputstyle,:inputstyle3=>inputstyle3,:inputstyle2=>inputstyle2} %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+    <% end %>
+</div>
+<b>注意：</b>
+<p>1、新建时，非主管用户填写时间即可，主管用户可以选择成员，给部门成员填写绩效</p>
+<p>2、新建确认之后，才会出现绩效考核主题添加栏，点击加号<img alt="Add" src="/images/add.png?1358712346" style="vertical-align: middle;">按钮即可添加绩效项</p>
+<p>3、默认状态为新建状态</p>
+<p>&nbsp;&nbsp;&nbsp;a.普通用户可将状态置为“审批”提交给主管，之后只可查看不能修改</p>
+<p>&nbsp;&nbsp;&nbsp;b.主管可对用户状态置为“新建”、“审批”、“确认”，置为“确认”状态之后提交给管理员，主管只可查看不可修改</p>
+<p>&nbsp;&nbsp;&nbsp;c.只有在“新建”状态时，普通用户才有修改权限，若用户提交之后，想要修改，则需主管将状态置为“新建”</p>

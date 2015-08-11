@@ -1,0 +1,4 @@
+class Department < ActiveRecord::Base
+  attr_accessible :id, :name, :pre_department_id, :project_id, :sort_id
+  belongs_to(:project,:class_name => "Project",:foreign_key => "project_id")
+end

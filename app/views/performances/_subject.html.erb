@@ -1,0 +1,88 @@
+#encoding:utf-8
+<table width="1350" cellspacing="1" cellpadding="0" bgcolor="#000000"  style="word-break:break-all; word-wrap:break-word;">
+  <tr align="center">
+    <td width="3%" bgcolor="#FFFFFF" ><strong>序号</strong></td>
+    <td width="5%" bgcolor="#FFFFFF"><strong>优先级</strong></td>
+    <td width="15%" bgcolor="#FFFFFF"><strong>主题</strong></td>
+    <td width="25%"  bgcolor="#FFFFFF"><strong>目标</strong></td>
+    <td width="15%"  bgcolor="#FFFFFF"><strong>任务说明</strong></td>
+    <td width="15%"  bgcolor="#FFFFFF"><strong>综合评价</strong></td>
+    <td width="5%"  bgcolor="#FFFFFF"><strong>配分</strong></td>
+    <td width="5%"  bgcolor="#FFFFFF"><strong>主管评分</strong></td>
+    <td bgcolor="#BBBBBB"><strong><%="管理"if can_modify_performance(@performance)%></strong></td>
+  </tr>
+  <tr bgcolor="#339966" align="center">
+    <td colspan="6" ><strong>关键绩效</strong></td>
+    <td><strong><%= get_key_socre %></strong></td>
+    <td >&nbsp;</td>
+    <td align="center" bgcolor="#FFFFFF">
+        <% if can_modify_performance(@performance) and performance_can_delete?(@performance)%>
+        <%= link_to(image_tag('add.png', :style => 'vertical-align: middle;'),
+                                                     new_project_performance_subject_path(@project,:subject_type=>1),
+                                                     :remote => true,
+                                                     :method => 'get',
+                                                     :title => "增加关键绩效项",
+                                                     :tabindex => 200) %><% end %>
+    </td>
+  </tr>
+  <% count1 = 1;count2=1 %>
+  <% if @subjects.any? %>
+      <% @subjects.each do |subject|%>
+          <% if subject.subject_type == 1 %>
+              <tr id = <%="key-item-#{count1}" %> >
+                <td align="center" bgcolor="#FFFFFF"><%= count1 %></td>
+                <td align="center" bgcolor="#FFFFFF"><%= get_priority_name subject.priority_id %></td>
+                <td bgcolor="#FFFFFF" ><%= sanitize get_text_limit(subject.subject) %></td>
+                <td bgcolor="#FFFFFF"><%= sanitize get_text_limit(subject.aim) %></td>
+                <td bgcolor="#FFFFFF"><%= sanitize get_text_limit(subject.comment) %></td>
+                <td bgcolor="#FFFFFF"><%= sanitize get_text_limit(subject.assessment) %></td>
+                <td align="center" bgcolor="#FFFFFF"><%= subject.score %></td>
+                <td align="center" bgcolor="#FFFFFF"><%= subject.leader_mark %></td>
+                <td align="center" bgcolor="#FFFFFF">
+                  <% if can_modify_performance(@performance) and performance_can_delete?(@performance) %>
+                    <%= link_to("编辑",edit_project_performance_subject_path(@project,subject,:subject_type=>1),:remote => true, :class =>"icon icon-edit",:tabindex => 200) %>
+                    <%= link_to("删除",project_performance_subject_path(@project,subject,:subject_type=>1),:remote => true,:method => 'delete', :class =>"icon icon-del",:tabindex => 200) %>
+                  <% end %>
+                  </td>
+              </tr>
+          <% end %>
+          <% count1=count1+1 %>
+      <% end %>
+  <% end %>
+  <tr bgcolor="#339966" align="center">
+    <td colspan="6"><strong>团队精神</strong></td>
+    <td><strong><%= get_add_socre %></strong></td>
+    <td >&nbsp;</td>
+    <td align="center" bgcolor="#FFFFFF">
+        <% if can_modify_performance(@performance) and performance_can_delete?(@performance) %>
+        <%= link_to(image_tag('add.png', :style => 'vertical-align: middle;'),
+                                                     new_project_performance_subject_path(@project,:subject_type=>2),
+                                                     :remote => true,
+                                                     :method => 'get',
+                                                     :title => "增加团队精神项",
+                                                     :tabindex => 200) %><% end %>
+    </td>
+  <% if @subjects.any? %>
+      <% @subjects.each do |subject|%>
+            <% if subject.subject_type == 2 %>
+              <tr <%="item-#{count2}" %>>
+                <td align="center" bgcolor="#FFFFFF"><%=count2%></td>
+                <td align="center" bgcolor="#FFFFFF"><%= get_priority_name subject.priority_id %></td>
+                <td bgcolor="#FFFFFF"><%= sanitize get_text_limit(subject.subject) %></td>
+                <td bgcolor="#FFFFFF"><%= sanitize get_text_limit(subject.aim) %></td>
+                <td bgcolor="#FFFFFF"><%= sanitize get_text_limit(subject.comment) %></td>
+                <td bgcolor="#FFFFFF"><%= sanitize get_text_limit(subject.assessment) %></td>
+                <td align="center" bgcolor="#FFFFFF"><%= subject.score %></td>
+                <td align="center" bgcolor="#FFFFFF"><%= subject.leader_mark %></td>
+                <td align="center" bgcolor="#FFFFFF">
+                  <% if can_modify_performance(@performance) and performance_can_delete?(@performance) %>
+                     <%= link_to("编辑",edit_project_performance_subject_path(@project,subject,:subject_type=>2),:remote => true, :class =>"icon icon-edit",:tabindex => 200) %>
+                     <%= link_to("删除",project_performance_subject_path(@project,subject,:subject_type=>2),:remote => true,:method => 'delete', :class =>"icon icon-del",:tabindex => 200) %>
+                  <%end%>
+                  </td>
+              </tr>
+              <% count2=count2+1 %>
+            <% end %>
+      <% end %>
+  <% end %>
+</table>

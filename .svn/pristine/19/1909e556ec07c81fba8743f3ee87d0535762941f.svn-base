@@ -1,0 +1,13 @@
+class CreateDepartments < ActiveRecord::Migration
+  def change
+    create_table :departments do |t|
+      t.int :id
+      t.int :project_id
+      t.int :pre_department_id
+      t.varchar(255) :name
+      t.int :sort_id
+
+      t.timestamps
+    end
+  end
+end

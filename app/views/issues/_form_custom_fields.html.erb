@@ -1,0 +1,29 @@
+<div class="splitcontent">
+<div class="splitcontentleft">
+<% i = 0 %>
+<% o = "" %>
+<% t = "" %>
+<% split_on = (@issue.custom_field_values.size / 2.0).ceil - 1 %>
+<% @issue.editable_custom_field_values.each do |value| %>
+<% if value.custom_field.id==8 %>
+<% o=custom_field_tag( :issue, value) %>
+<% t=h(value.custom_field.name) %>
+<% next %>
+<% end -%>
+  <p><%= custom_field_tag_with_label :issue, value, :required => @issue.required_attribute?(value.custom_field_id) %></p>
+<% if i == split_on -%>
+</div><div class="splitcontentright">
+<% end -%>
+<% i += 1 -%>
+<% end -%>
+</div>
+</div>
+<div class="splitcontent">
+<% if o!="" %>
+  <p id="watchers_form"><label><%= t %></label>
+  <span id="watchers_inputs">
+  <%= o %>
+  </span>
+  </p>
+<% end -%>
+</div>

@@ -1,0 +1,118 @@
+#encoding:utf-8
+class DepartmentsController < ApplicationController
+  #验证管理员权限
+  before_filter :require_admin
+  # GET /departments
+  # GET /departments.json
+  def index
+    @departments = Department.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @departments }
+    end
+  end
+
+  # GET /departments/1
+  # GET /departments/1.json
+  def show
+    @department = Department.find(params[:id])
+    @project_name = @department.project.identifier
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @department }
+    end
+  end
+
+  # GET /departments/new
+  # GET /departments/new.json
+  def new
+    @bCreate = false
+    @department = Department.new
+    if !params[:project_id].blank? then
+      @department.project_id = params[:project_id]
+      @bCreate = true
+      @project_name = Project.find_by_id(@department.project_id).identifier
+    end
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @department }
+    end
+  end
+
+  # GET /departments/1/edit
+  def edit
+    @department = Department.find(params[:id])
+     @project_name = @department.project.identifier
+  end
+
+  # POST /departments
+  # POST /departments.json
+  def create
+    @department = Department.new(params[:department])
+
+    respond_to do |format|
+      if @department.save
+        format.html { redirect_to @department, notice: 'Department was successfully created.' }
+        format.json { render json: @department, status: :created, location: @department }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @department.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /departments/1
+  # PUT /departments/1.json
+  def update
+    @department = Department.find(params[:id])
+
+    respond_to do |format|
+      if @department.update_attributes(params[:department])
+        format.html { redirect_to @department, notice: 'Department was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @department.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /departments/1
+  # DELETE /departments/1.json
+  def destroy
+    @department = Department.find(params[:id])
+    #删除所有对应的部门
+    sub_departments = get_department_sub(params[:id])
+    if sub_departments.any? then
+       sub_departments.each do|value|
+         department_users = DepartmentUser.find_all_by_department_id(value.id)
+         if department_users.any? then
+            department_users.each do|user|
+              user.destroy
+            end
+         end
+         value.destroy
+       end
+    end
+    @project_name = @department.project.identifier
+    @department.destroy
+    curid = @department.id
+    if !curid.blank? then
+      department_users = DepartmentUser.find_all_by_department_id(curid)
+      if department_users.any? then
+        department_users.each do|user|
+          user.destroy
+        end
+      end
+    end
+    respond_to do |format|
+      if !@project_name.blank? then
+        format.html { redirect_to "/projects/#{@project_name}/settings/department" }
+      else
+        format.html {department_path}
+      end
+      format.json { head :no_content }
+    end
+  end
+end

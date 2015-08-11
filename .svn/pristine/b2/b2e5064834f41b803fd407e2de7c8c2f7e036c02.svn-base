@@ -1,0 +1,16 @@
+#encoding:utf-8
+class Performance < ActiveRecord::Base
+  attr_accessible :date, :department_member_id, :leader_assessment, :leader_mark, :leader_rating, :project_id, :self_assessment, :status, :user_id
+  belongs_to :department_member,:foreign_key => 'department_member_id'
+  belongs_to :project
+  has_many :performance_subjects, :foreign_key => "performance_id", :dependent => :destroy
+  validate :validate_date
+
+  def validate_date
+    performance = Performance.find_by_sql("select * from #{Performance.table_name} where date = '#{date}' and user_id = #{user_id}")
+    if !performance.blank? or !performance.empty?
+      errors.add :user_id, ":该用户此月绩效已存在!"
+    end
+  end
+end
+

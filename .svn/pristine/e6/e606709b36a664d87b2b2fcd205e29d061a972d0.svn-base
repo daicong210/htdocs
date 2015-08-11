@@ -1,0 +1,40 @@
+#encoding:utf-8
+<% if performances.any? %>
+    <table class="list members">
+      <thead><tr>
+        <th style = "text-align: left">#</th>
+        <th style = "text-align: left">状态</th>
+        <th style = "text-align: left">部门</th>
+        <th style = "text-align: left">月份</th>
+        <th style= "text-align: left">成员</th>
+        <th style= "text-align: left">自我评价</th>
+        <th style= "text-align: left">主管评价</th>
+        <th style= "text-align: left">主管评分</th>
+        <th style= "text-align: left">主管评级</th>
+        <th>操作</th>
+      </tr></thead>
+      <tbody>
+      <% performances.each do |dep| %>
+          <tr id="member-1" class="<%= cycle 'odd', 'even' %> member">
+            <td><%= dep.id %></td>
+            <td><%= get_performance_status dep %></td>
+            <td><%= get_performance_department_name(dep) %></td>
+            <td><%= get_performance_date_month dep %></td>
+            <td><%= get_performance_user_name dep.user_id %></td>
+            <td><%= get_text_limit(dep.self_assessment,12) %></td>
+            <td><%= get_text_limit(dep.leader_assessment,12) %></td>
+            <td><%= dep.leader_mark.blank? ? "": dep.leader_mark %></td>
+            <td><%= get_performance_rating dep %></td>
+            <td style="text-align: center" class="buttons">
+              <a class = "icon icon-edit" rel="nofollow" href =<%= edit_project_performance_path(@project,dep) %>>编辑查看</a>
+              <% if performance_can_delete?(dep) %>
+                <%= delete_link project_performance_path(@project,dep) %>
+              <% end %>
+            </td>
+          </tr>
+      <% end; reset_cycle %>
+      </tbody>
+    </table>
+<% else %>
+    <p class="nodata"><%= l(:label_no_data) %></p>
+<% end %>

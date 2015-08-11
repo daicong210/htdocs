@@ -1,0 +1,40 @@
+#encoding:utf-8
+<% if performances.any? %>
+    <table class="list members">
+      <thead><tr>
+        <th style = "text-align: left">#</th>
+        <th style = "text-align: left">状态</th>
+        <th style = "text-align: left">部门</th>
+        <th style = "text-align: left">月份</th>
+        <th style= "text-align: left">成员</th>
+        <th style= "text-align: left">自我评价</th>
+        <th style= "text-align: left">主管评价</th>
+        <th style= "text-align: left">自评分</th>
+        <th style= "text-align: left">主管评分</th>
+        <th style= "text-align: left">主管评级</th>
+        <th>操作</th>
+      </tr></thead>
+      <tbody>
+      <% performances.each do |dep| %>
+          <tr id="member-1" class="<%= cycle 'odd', 'even' %> member">
+            <td><%= dep.id %></td>
+            <td><%= get_performance_status dep %></td>
+            <td><%= get_performance_department_name(dep) %></td>
+            <td><%= get_performance_date_month dep %></td>
+            <td><%= get_performance_user_name dep.user_id %></td>
+            <td><%= get_text_limit dep.self_assessment %></td>
+            <td><%= get_text_limit dep.leader_assessment %></td>
+            <td><%= dep.self_mark.blank? ? "暂无评分": dep.self_mark %></td>
+            <td><%= dep.leader_mark.blank? ? "暂无评分": dep.leader_mark %></td>
+            <td><%= get_performance_rating dep %></td>
+            <td class="buttons">
+              <a class = "icon icon-show" rel="nofollow" href =<%= "#" %>>查看</a>
+              <a class="icon icon-edit" rel="nofollow" href =<%="#" %>>编辑</a>
+            </td>
+          </tr>
+      <% end; reset_cycle %>
+      </tbody>
+    </table>
+<% else %>
+    <p class="nodata"><%= l(:label_no_data) %></p>
+<% end %>

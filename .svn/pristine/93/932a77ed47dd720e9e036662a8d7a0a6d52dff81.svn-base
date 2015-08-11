@@ -1,0 +1,19 @@
+#encoding:utf-8
+<%= back_url_hidden_field_tag %>
+<%= error_messages_for 'subject' %>
+<% subject = @subject.subject_type.blank? ? params[:subject_type] :@subject.subject_type %>
+<% max_score = get_score_max(session[:performance_id],subject)%>
+<% curscore = @subject.score %>
+<% if !curscore.blank? then max_score>0 ? max_score=(curscore+max_score):max_score=curscore end %>
+<div class="box tabular">
+  <%=  f.hidden_field :performance_id,:value=>  @subject.performance_id.blank? ? session[:performance_id] :@subject.performance_id %>
+  <p style="padding-left: 80px;"><%= f.select :priority_id, (@priorities.collect {|p| [p.name, p.id]}), {:required => true}  %></p>
+  <p style="padding-left: 80px;"><%= f.select :subject_type,subject_type_options(params[:subject_type]), {:required => true} %></p>
+  <p style="padding-left: 80px;"><%= f.text_area :subject, :rows => 3, :cols => 55,:required => true,:maxlength=>255 %></p>
+  <p style="padding-left: 80px;"><%= f.text_area :aim, :rows => 3, :cols => 55,:required => subject==1.to_s ? true:false,:maxlength=>255 %></p>
+  <p style="padding-left: 80px;"><%= f.text_area :comment,:rows => 3, :cols => 55,:maxlength=>255%></p>
+  <p style="padding-left: 80px;"><%= f.text_area :assessment,:rows => 3, :cols => 55,:maxlength=>255%></p>
+  <p style="padding-left: 80px;"><%= f.number_field :score,:size => 10,:required => true, :maxlength=>3,
+                                                    :min=>1,:max=>max_score,:onkeyup=>"value=value.replace(/[^0-9]\D*$/,'')"%></p>
+  <p style="padding-left: 80px;"><%= f.number_field :leader_mark,:size => 10,:min=>0,:max=>max_score, :onkeyup=>"value=value.replace(/[^0-9]\D*$/,'')"%></p>
+</div>

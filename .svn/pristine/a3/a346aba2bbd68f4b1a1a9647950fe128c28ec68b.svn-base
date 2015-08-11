@@ -1,0 +1,12 @@
+class CreateDepartmentUsers < ActiveRecord::Migration
+  def change
+    create_table :department_users do |t|
+      t.int :id
+      t.int :department_id
+      t.int :user_id
+      t.int :rank_id
+
+      t.timestamps
+    end
+  end
+end

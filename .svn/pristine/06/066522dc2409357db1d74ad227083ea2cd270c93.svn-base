@@ -1,0 +1,6 @@
+class Performance < ActiveRecord::Base
+  attr_accessible :date, :department_member_id, :leader_assessment, :leader_mark, :leader_rating, :project_id, :self_assessment, :status, :user_id
+  belongs_to :department_member,:foreign_key => 'department_member_id'
+  belongs_to :project
+  has_many :performance_subjects, :foreign_key => "performance_id", :dependent => :destroy
+end

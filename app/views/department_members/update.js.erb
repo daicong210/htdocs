@@ -1,0 +1,11 @@
+<% if !@department_member.leader %>
+   //$("#member-<%= @department_member.id %>-ranks").hide();
+   $("#member-<%= @department_member.id %>-ranks-img").hide();
+   //$("#member-<%= @department_member.id %>-ranks-img > img").hide();
+<% else %>
+  $("#member-<%= @department_member.id %>-ranks").show();
+  $("#member-<%= @department_member.id %>-ranks-img").show();
+//$("#member-<%= @department_member.id %>-ranks-img > img").show();
+<% end %>
+hideOnLoad();
+$("#member-<%= @department_member.id %>").effect("highlight");

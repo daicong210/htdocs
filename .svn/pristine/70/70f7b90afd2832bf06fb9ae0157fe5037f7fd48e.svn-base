@@ -1,0 +1,32 @@
+#encoding:utf-8
+<h1>职位表</h1>
+
+<div class="department_add">
+  <% if @ranks.any? %>
+      <table class="list members">
+        <thead><tr>
+          <th style = "text-align: left">职位</th>
+          <th>操作</th>
+        </tr></thead>
+        <tbody>
+        <% @ranks.each do |rank| %>
+            <tr id="member-1" class="<%= cycle 'odd', 'even' %> member">
+              <td><%= rank.name %></td>
+              <td class="buttons">
+                <a class="icon icon-edit" rel="nofollow"><%= link_to '编辑', {:controller => "ranks",:action => "edit",:id=>"#{rank.id}",:department_id=>@department_id}%></a>
+                <a class="icon icon-del" rel="nofollow"><%= link_to '删除',  {:controller => "ranks",:action => "destroy",:id=>"#{rank.id}",:department_id=>@department_id}, method: :delete, data: { confirm: '确定删除?' } %></a>
+              </td>
+            </tr>
+        <% end; reset_cycle %>
+        </tbody>
+      </table>
+  <% else %>
+      <p class="nodata"><%= l(:label_no_data) %></p>
+  <% end %>
+  <%= link_to '增加职位', {:controller => "ranks",:action => "new",:department_id=>@department_id},:class => 'icon icon-add' %>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <% if !@department_id.blank? %>
+      <%= link_to '返回', :controller => "department_users",:action => "show_members",:department_id=>@department_id %>
+  <%end%>
+
+</div>

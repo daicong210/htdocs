@@ -1,0 +1,11 @@
+class PerformanceSubject < ActiveRecord::Base
+  attr_accessible :performance_id, :aim, :assessment, :comment, :leader_mark, :priority_id, :score, :subject, :subject_type
+  validates_presence_of :subject,:score
+  validate :validate_performance_id
+
+  def validate_performance_id
+      if performance_id.nil? then
+        errors.add :performance_id, :invalid
+      end
+  end
+end

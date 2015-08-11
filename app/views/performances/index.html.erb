@@ -1,0 +1,14 @@
+#encoding:utf-8
+<br>
+    <% if  @performances.blank? or @performances.empty? %>
+        <p class="nodata"><%= l(:label_no_data) %></p>
+    <% else %>
+        <%= render :partial => 'performances/list', :locals => {:performances => @performances, :project=>@project} %>
+        <p class="pagination"><%= pagination_links_full @performances_pages, @performances_count %></p>
+    <% end %>
+
+<% content_for :sidebar do %>
+    <br>
+    <%= link_to "新建考核",new_project_performance_path,:class => 'icon icon-add'  %><br><br>
+    <% #link_to '批量导出Excel', {:controller=>"performances",:action=>"export_excels",:file_type=>"Excel", :remote=>true}, :class => 'icon icon-add' %>
+<% end %>

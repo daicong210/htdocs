@@ -1,0 +1,41 @@
+#encoding:utf-8
+<div class="splitcontentleft">
+  <p>
+    <label>状态<span class="required"> *</span></label>
+    <%= f.select :status, get_performance_status_options(),{ :include_blank => false},{:style=>"width:10%" }%>
+  </p>
+</div>
+<p class="other-formats" style="float: right;">导出
+    <span><%=link_to 'Excel', :controller=>"performances",:action=>"down",:file_type=>"Excel",:performance_id=>@performance.id  %></span>
+</p>
+<table width="1300"  cellpadding="0" cellspacing="1" bgcolor="#000000"  >
+  <tr>
+    <td width="60" align="center" bgcolor="#FFFFFF" >部门</td>
+    <td width="100" align="center" bgcolor="#FFFFFF">
+          <%= get_performance_department_name(@performance) %>
+    </td>
+    <td width="60" align="center" class="font_title2"  bgcolor="#FFFFFF">姓名</td>
+    <td width="100" align="center" bgcolor="#FFFFFF"><%=get_user_full_name(@department_member) %></td>
+    <td width="80" align="center" class="font_title2"  bgcolor="#FFFFFF">考核月份</td>
+    <td width="100" align="center" bgcolor="#FFFFFF"><%=@performance.date.strftime("%Y年%m月") %></td>
+    <td width="100" align="center" class="font_title2"  bgcolor="#FFFFFF">主管评分</td>
+    <td width="100" align="center" bgcolor="#FFFFFF"><%=get_leader_mark_sum(@performance.id)==0? "":get_leader_mark_sum(@performance.id) %></td>
+    <td width="120" align="center" class="font_title2"  bgcolor="#FFFFFF">月度评级</td>
+    <td width="80" align="center" bgcolor="#FFFFFF"><%= f.text_field :leader_rating,:style=>inputstyle %></td>
+  </tr>
+</table>
+<%= render :partial =>'performances/subject',:locals => {:performance_id=>@performance.id,:inputstyle=>inputstyle,:inputstyle2=>inputstyle2} %>
+<table width="1300"  cellpadding="0" cellspacing="1" bgcolor="#000000"   >
+  <tr bgcolor="#339966" align="center"> <td width="88%"  colspan="6" ><strong>自我评价</strong></td></tr>
+  <tr bgcolor="#339966" align="center">
+    <td width="100%" align="center"  bgcolor="#FFFFFF" ><%= f.text_area :self_assessment,:rows=>3, :style=>inputstyle3 %></td>
+  </tr>
+  <tr bgcolor="#339966" align="center"> <td colspan="6" ><strong>主管评价</strong></td></tr>
+  <tr bgcolor="#339966" align="center">
+    <td width="100%" align="center"  bgcolor="#FFFFFF" ><%= f.text_area :leader_assessment,:rows=>3, :style=>inputstyle3 %></td>
+  </tr>
+</table>
+<% if can_modify_self_assessment(@performance)%>
+    <%= f.submit :更新 %>
+<% end %>
+<%= link_to "返回",project_performances_path,:class => 'icon icon-back' %>

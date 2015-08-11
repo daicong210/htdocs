@@ -1,0 +1,41 @@
+#encoding:utf-8
+<div class="splitcontentleft">
+  <p>
+    <label>状态<span class="required"> *</span></label>
+    <%= f.select :status, get_performance_status_options(@performance),{ :include_blank => false},{:style=>"width:10%" }%>
+  </p>
+</div>
+<table width="1350"  cellpadding="0" cellspacing="1" bgcolor="#000000"  >
+  <tr>
+    <td width="60" align="center" bgcolor="#FFFFFF" >部门</td>
+    <td width="100" align="center" bgcolor="#FFFFFF">自动填写</td>
+    <td width="60" align="center" class="font_title2"  bgcolor="#FFFFFF">姓名</td>
+    <td width="100" align="center" bgcolor="#FFFFFF">
+    <%= f.select :user_id, users_for_performance_options(@department_member), { :include_blank => false},{:disabled=>false,:style=>"width:100%;height:100%;" }%></td>
+    <td width="80" align="center" class="font_title2"  bgcolor="#FFFFFF">考核月份</td>
+    <td width="100" align="center" bgcolor="#FFFFFF">
+        <%= f.date_select :date,{:discard_day=>true}%>
+    </td>
+    <td width="100" align="center" class="font_title2"  bgcolor="#FFFFFF">主管评分</td>
+    <td width="100" align="center" bgcolor="#FFFFFF">
+      <%=get_leader_mark_sum(@performance.id)==0? "":get_leader_mark_sum(@performance.id) %>
+    </td>
+    <td width="120" align="center" class="font_title2"  bgcolor="#FFFFFF">月度评级</td>
+    <td width="80" align="center" bgcolor="#FFFFFF"><%= get_rating @performance.leader_rating %></td>
+  </tr>
+</table>
+<table width="1350"  cellpadding="0" cellspacing="1" bgcolor="#000000"   >
+  <tr bgcolor="#339966" align="center"> <td width="88%"  colspan="6" ><strong>自我评价</strong></td></tr>
+  <tr bgcolor="#339966" align="center">
+    <td width="100%" align="center"  bgcolor="#FFFFFF" ><%= f.text_area :self_assessment,:rows=>3, :style=>inputstyle3 %></td>
+  </tr>
+  <tr bgcolor="#339966" align="center"> <td colspan="6" ><strong>主管评价</strong></td></tr>
+  <tr bgcolor="#339966" align="center">
+    <td width="100%" align="center"  bgcolor="#FFFFFF" ><%= f.text_area :leader_assessment,:rows=>3, :style=>inputstyle3 %></td>
+  </tr>
+</table>
+<% if can_modify_performance(@performance)%>
+  <%= f.submit   :确认 %>
+<% end %>
+<%= link_to "返回",project_performances_path,:class => 'icon icon-back' %>
+

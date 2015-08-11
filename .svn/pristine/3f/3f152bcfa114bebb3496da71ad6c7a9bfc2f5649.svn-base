@@ -1,0 +1,8 @@
+<%= error_messages_for @department %>
+
+<div class="box tabular">
+  <p><%= f.text_field :name, :required => true %></p>
+  <% if @department.valid_parents.any? %>
+      <p><%= f.select :parent_id, departments_options_for_select(@department.valid_parents), :include_blank => true, :label => :field_department_parent %></p>
+  <% end %>
+</div>

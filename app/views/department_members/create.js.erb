@@ -1,0 +1,9 @@
+//encoding:utf-8
+$('#tab-department-members').html('<%= escape_javascript(render :partial => 'department_members/members') %>');
+hideOnLoad();
+
+<% if @created %>
+  $("#member-<%= @members.last.id%>").effect("highlight");
+<% else %>
+  alert('<%= raw(escape_javascript(l(:notice_failed_to_save_members, :errors => "无效添加"))) %>');
+<% end %>

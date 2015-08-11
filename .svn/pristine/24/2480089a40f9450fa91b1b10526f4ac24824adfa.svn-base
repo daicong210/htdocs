@@ -1,0 +1,51 @@
+<div id="encoding:utf-8"></div>
+<h1>部门成员列表</h1>
+
+<div class="department_add">
+  <% if @department_users.any? %>
+      <table class="list members">
+        <thead><tr>
+          <th style = "text-align: left">序号</th>
+          <th style = "text-align: left">部门</th>
+          <th style = "text-align: left">用户</th>
+          <th style="width:15%;text-align: left">职位</th>
+          <th>操作</th>
+        </tr></thead>
+        <tbody>
+        <% @department_users.each do |department_user| %>
+            <% if !department_user.department.name.blank? then%>
+                <% department_name = department_user.department.name%>
+            <% else %>
+                <% department_name = "无法识别"%>
+            <% end%>
+            <% if !department_user.user.firstname.blank? || !department_user.user.lastname.blank? then%>
+                <% user_name = "#{department_user.user.firstname}#{department_user.user.lastname}"%>
+            <% else %>
+                <% user_name = "无法识别"%>
+            <% end%>
+            <% if !department_user.rank.name.blank? then%>
+                <% rank_name = department_user.rank.name%>
+            <% else %>
+                <% rank_name = "无法识别"%>
+            <% end%>
+            <tr id="member-1" class="<%= cycle 'odd', 'even' %> member">
+              <td><%= department_user.id %></td>
+              <td><%= department_name %></td>
+              <td><%= user_name %></td>
+              <td><%= rank_name %></td>
+              <td class="buttons">
+                <a class="icon icon-edit" rel="nofollow"><%= link_to '编辑', edit_department_user_path(department_user) %></a>
+                <a class="icon icon-del" rel="nofollow"><%= link_to '删除', department_user, method: :delete, data: { confirm: '删除部门会删除所有相关部门和人员，确定删除?' } %></a>
+              </td>
+            </tr>
+        <% end; reset_cycle %>
+        </tbody>
+      </table>
+  <% else %>
+      <p class="nodata"><%= l(:label_no_data) %></p>
+  <% end %>
+  <%= link_to "增加部门", {:controller => "department_users", :action => "new"},:class => 'icon icon-add'  %>
+</div>
+<br>
+
+
