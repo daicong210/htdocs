@@ -1,0 +1,10 @@
+#encoding:utf-8
+<% if @performances.any? %>
+    <fieldset><legend><%="下载列表"%></legend>
+      <% @performances.each do|value|%>
+      <span><%=link_to value[:name], :controller=>"performances",:action=>"down",:file_type=>"Excel",:performance_id=>value[:id]  %></span>&nbsp;&nbsp;&nbsp;
+      <% end %>
+    </fieldset>
+<%else%>
+    <p class="nodata"><%= l(:label_no_data) %></p>
+<% end %>

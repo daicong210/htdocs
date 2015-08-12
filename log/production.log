@@ -1621,3 +1621,173 @@ Processing by WelcomeController#index as HTML
   Current user: anonymous
   Rendered welcome/index.html.erb within layouts/base (664.0ms)
 Completed 200 OK in 2571ms (Views: 2200.1ms | ActiveRecord: 25.0ms)
+Started GET "/projects/ogame" for 172.16.136.43 at 2015-08-11 18:02:14 +0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"ogame"}
+  Current user: anonymous
+  Rendered projects/_members_box.html.erb (3.0ms)
+  Rendered projects/show.html.erb within layouts/base (59.0ms)
+Completed 200 OK in 519ms (Views: 134.0ms | ActiveRecord: 95.0ms)
+Started GET "/login" for 172.16.136.43 at 2015-08-11 18:02:20 +0800
+Processing by AccountController#login as HTML
+  Current user: anonymous
+  Rendered account/login.html.erb within layouts/base (5.0ms)
+Completed 200 OK in 19ms (Views: 14.0ms | ActiveRecord: 2.0ms)
+Started POST "/login" for 172.16.136.43 at 2015-08-11 18:02:23 +0800
+Processing by AccountController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0FgviDnBVD39KTZfkAIH2SdmMeb06balisZvbh6RMqI=", "back_url"=>"http://172.16.136.43:3001/projects/ogame", "username"=>"admin", "password"=>"[FILTERED]", "login"=>"登录 »"}
+  Current user: anonymous
+Successful authentication for 'admin' from 172.16.136.43 at 2015-08-11 10:02:23 UTC
+Redirected to http://172.16.136.43:3001/projects/ogame
+Completed 302 Found in 151ms (ActiveRecord: 82.0ms)
+Started GET "/projects/ogame" for 172.16.136.43 at 2015-08-11 18:02:23 +0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered projects/_members_box.html.erb (1.0ms)
+  Rendered projects/show.html.erb within layouts/base (7.0ms)
+Completed 200 OK in 122ms (Views: 79.0ms | ActiveRecord: 14.0ms)
+Started GET "/projects/ogame/performances" for 172.16.136.43 at 2015-08-11 18:02:25 +0800
+Processing by PerformancesController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered performances/_list.html.erb (49.0ms)
+  Rendered performances/index.html.erb within layouts/base (54.0ms)
+Completed 200 OK in 167ms (Views: 123.0ms | ActiveRecord: 28.0ms)
+Started GET "/projects/ogame/performances/16/edit" for 172.16.136.43 at 2015-08-11 18:02:30 +0800
+Processing by PerformancesController#edit as HTML
+  Parameters: {"project_id"=>"ogame", "id"=>"16"}
+  Current user: admin (id=1)
+  Rendered performances/_subject.html.erb (101.0ms)
+  Rendered performances/_update.html.erb (140.0ms)
+  Rendered performances/_form.html.erb (145.0ms)
+  Rendered performances/show.html.erb within layouts/base (147.0ms)
+Completed 200 OK in 228ms (Views: 200.0ms | ActiveRecord: 23.0ms)
+Started GET "/projects/ogame/performances/27/edit" for 172.16.136.43 at 2015-08-11 18:02:33 +0800
+Processing by PerformancesController#edit as HTML
+  Parameters: {"project_id"=>"ogame", "id"=>"27"}
+  Current user: admin (id=1)
+  Rendered performances/_subject.html.erb (150.0ms)
+  Rendered performances/_update.html.erb (158.0ms)
+  Rendered performances/_form.html.erb (159.0ms)
+  Rendered performances/show.html.erb within layouts/base (159.0ms)
+Completed 200 OK in 237ms (Views: 219.0ms | ActiveRecord: 13.0ms)
+Started GET "/projects/ogame/performances/25/edit" for 172.16.136.43 at 2015-08-11 18:02:37 +0800
+Processing by PerformancesController#edit as HTML
+  Parameters: {"project_id"=>"ogame", "id"=>"25"}
+  Current user: admin (id=1)
+  Rendered performances/_subject.html.erb (11.0ms)
+  Rendered performances/_update.html.erb (17.0ms)
+  Rendered performances/_form.html.erb (19.0ms)
+  Rendered performances/show.html.erb within layouts/base (19.0ms)
+Completed 200 OK in 91ms (Views: 72.0ms | ActiveRecord: 14.0ms)
+Started GET "/projects/ogame/performances/4/edit" for 172.16.136.43 at 2015-08-11 18:02:42 +0800
+Processing by PerformancesController#edit as HTML
+  Parameters: {"project_id"=>"ogame", "id"=>"4"}
+  Current user: admin (id=1)
+  Rendered performances/_subject.html.erb (16.0ms)
+  Rendered performances/_update.html.erb (25.0ms)
+  Rendered performances/_form.html.erb (27.0ms)
+  Rendered performances/show.html.erb within layouts/base (27.0ms)
+Completed 200 OK in 105ms (Views: 81.0ms | ActiveRecord: 17.0ms)
+Started GET "/projects/ogame/performances/25/edit" for 172.16.136.43 at 2015-08-11 18:02:48 +0800
+Processing by PerformancesController#edit as HTML
+  Parameters: {"project_id"=>"ogame", "id"=>"25"}
+  Current user: admin (id=1)
+  Rendered performances/_subject.html.erb (8.0ms)
+  Rendered performances/_update.html.erb (17.0ms)
+  Rendered performances/_form.html.erb (19.0ms)
+  Rendered performances/show.html.erb within layouts/base (19.0ms)
+Completed 200 OK in 97ms (Views: 76.0ms | ActiveRecord: 13.0ms)
+Started GET "/projects/ogame/performances/27/edit" for 172.16.136.43 at 2015-08-11 18:02:50 +0800
+Processing by PerformancesController#edit as HTML
+  Parameters: {"project_id"=>"ogame", "id"=>"27"}
+  Current user: admin (id=1)
+  Rendered performances/_subject.html.erb (9.0ms)
+  Rendered performances/_update.html.erb (15.0ms)
+  Rendered performances/_form.html.erb (16.0ms)
+  Rendered performances/show.html.erb within layouts/base (16.0ms)
+Completed 200 OK in 96ms (Views: 77.0ms | ActiveRecord: 15.0ms)
+Started GET "/projects/ogame/performances/24/edit" for 172.16.136.43 at 2015-08-11 18:03:06 +0800
+Processing by PerformancesController#edit as HTML
+  Parameters: {"project_id"=>"ogame", "id"=>"24"}
+  Current user: admin (id=1)
+  Rendered performances/_subject.html.erb (7.0ms)
+  Rendered performances/_update.html.erb (15.0ms)
+  Rendered performances/_form.html.erb (16.0ms)
+  Rendered performances/show.html.erb within layouts/base (16.0ms)
+Completed 200 OK in 93ms (Views: 70.0ms | ActiveRecord: 16.0ms)
+Started GET "/projects/ogame/performances/18/edit" for 172.16.136.43 at 2015-08-11 18:03:09 +0800
+Processing by PerformancesController#edit as HTML
+  Parameters: {"project_id"=>"ogame", "id"=>"18"}
+  Current user: admin (id=1)
+  Rendered performances/_subject.html.erb (6.0ms)
+  Rendered performances/_update.html.erb (12.0ms)
+  Rendered performances/_form.html.erb (13.0ms)
+  Rendered performances/show.html.erb within layouts/base (14.0ms)
+Completed 200 OK in 84ms (Views: 68.0ms | ActiveRecord: 12.0ms)
+Started GET "/projects/ogame/performances/19/edit" for 172.16.136.43 at 2015-08-11 18:03:13 +0800
+Processing by PerformancesController#edit as HTML
+  Parameters: {"project_id"=>"ogame", "id"=>"19"}
+  Current user: admin (id=1)
+  Rendered performances/_subject.html.erb (6.0ms)
+  Rendered performances/_update.html.erb (14.0ms)
+  Rendered performances/_form.html.erb (14.0ms)
+  Rendered performances/show.html.erb within layouts/base (14.0ms)
+Completed 200 OK in 141ms (Views: 119.0ms | ActiveRecord: 19.0ms)
+Started GET "/projects/ogame/performances/27/edit" for 172.16.136.43 at 2015-08-11 18:27:44 +0800
+Processing by PerformancesController#edit as HTML
+  Parameters: {"project_id"=>"ogame", "id"=>"27"}
+  Current user: admin (id=1)
+  Rendered performances/_subject.html.erb (50.0ms)
+  Rendered performances/_update.html.erb (61.0ms)
+  Rendered performances/_form.html.erb (61.0ms)
+  Rendered performances/show.html.erb within layouts/base (61.0ms)
+Completed 200 OK in 141ms (Views: 119.0ms | ActiveRecord: 13.0ms)
+Started GET "/projects/ogame/performances" for 172.16.136.43 at 2015-08-12 10:26:28 +0800
+Processing by PerformancesController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered performances/_list.html.erb (81.0ms)
+  Rendered performances/index.html.erb within layouts/base (82.0ms)
+Completed 200 OK in 173ms (Views: 132.0ms | ActiveRecord: 35.0ms)
+Started GET "/projects/ogame/performances" for 172.16.136.43 at 2015-08-12 10:26:50 +0800
+Processing by PerformancesController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered performances/_list.html.erb (23.0ms)
+  Rendered performances/index.html.erb within layouts/base (24.0ms)
+Completed 200 OK in 107ms (Views: 89.0ms | ActiveRecord: 14.0ms)
+Started GET "/projects/ogame/performances" for 172.16.136.43 at 2015-08-12 10:26:52 +0800
+Processing by PerformancesController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered performances/_list.html.erb (32.0ms)
+  Rendered performances/index.html.erb within layouts/base (33.0ms)
+Completed 200 OK in 109ms (Views: 86.0ms | ActiveRecord: 18.0ms)
+Started GET "/projects/ogame/performances" for 172.16.136.43 at 2015-08-12 10:26:56 +0800
+Processing by PerformancesController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered performances/_list.html.erb (26.0ms)
+  Rendered performances/index.html.erb within layouts/base (26.0ms)
+Completed 200 OK in 106ms (Views: 91.0ms | ActiveRecord: 10.0ms)
+Started GET "/projects/ogame/boards" for 172.16.136.43 at 2015-08-12 10:26:57 +0800
+Processing by BoardsController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered boards/index.html.erb within layouts/base (80.0ms)
+Completed 200 OK in 464ms (Views: 298.0ms | ActiveRecord: 16.0ms)
+Started GET "/projects/ogame/performances" for 172.16.136.43 at 2015-08-12 10:26:59 +0800
+Processing by PerformancesController#index as HTML
+  Parameters: {"project_id"=>"ogame"}
+  Current user: admin (id=1)
+  Rendered performances/_list.html.erb (24.0ms)
+  Rendered performances/index.html.erb within layouts/base (25.0ms)
+Completed 200 OK in 103ms (Views: 88.0ms | ActiveRecord: 9.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+OpenIdAuthentication.store is nil. Using in-memory store.
+OpenIdAuthentication.store is nil. Using in-memory store.
+Creating scope :member_of. Overwriting existing method Principal.member_of.
+Creating scope :member_of. Overwriting existing method Principal.member_of.
