@@ -19,7 +19,7 @@ class PerformanceSubject < ActiveRecord::Base
 
   def validate_score
     if !score.blank?
-      if score<0
+      if score<=0
         errors.add :score, ":配分不能小于0!"
       end
 
