@@ -2,7 +2,7 @@
 <div class="splitcontentleft">
   <p>
     <label>状态<span class="required"> *</span></label>
-    <% if can_modify_performance(@performance)%>
+    <% if can_modify_performance(@performance) or User.current.allowed_to?(:archive_performances, @project)%>
         <%= f.select :status, get_performance_status_options(@performance),{ :include_blank => false},{:style=>"width:10%" }%>
     <%else%>
         <%= f.select :status, get_performance_status_options(@performance),{ :include_blank => false},{:style=>"width:10%" ,:disabled=>true}%>

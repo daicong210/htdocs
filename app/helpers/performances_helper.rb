@@ -138,8 +138,8 @@ module PerformancesHelper
     DepartmentMember.find_by_sql("select * from department_members where department_id in(select id from departments where project_id = #{project_id}) and user_id = #{user_id}")
   end
   #是否能够修改
-  def can_modify_performance(performance)
-    if User.current.admin?
+  def can_modify_performance(performance,project=nil)
+    if User.current.admin? or User.current.allowed_to?(:archive_performances,  project)
       return  true
     end
     if performance.blank? then
@@ -183,8 +183,8 @@ module PerformancesHelper
     end
   end
 
-  def get_performances_lsit
-     if User.current.admin?
+  def get_performances_lsit(project=nil)
+     if User.current.admin? or User.current.allowed_to?(:archive_performances, project)
        return Performance.find_by_sql("select * from #{Performance.table_name} ORDER by date desc")
      end
      department_member = DepartmentMember.find_by_user_id(User.current.id)

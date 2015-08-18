@@ -27,7 +27,7 @@
             <td><%= get_performance_rating dep %></td>
             <td style="text-align: center" class="buttons">
               <a class = "icon icon-edit" rel="nofollow" href =<%= edit_project_performance_path(@project,dep) %>>编辑查看</a>
-              <% if performance_can_delete?(dep) and can_modify_performance(dep) %>
+              <% if performance_can_delete?(dep) and can_modify_performance(dep, @project)  %>
                 <%= delete_link project_performance_path(@project,dep) %>
               <% end %>
             </td>

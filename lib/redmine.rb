@@ -159,8 +159,9 @@ Redmine::AccessControl.map do |map|
   end
 
   map.project_module :performances do |map|
-    map.permission :manage_performances, {:performances => [:new, :create, :edit, :update, :destroy, :show,:index, :down, :export_excels, :send_excels],
+    map.permission :manage_performances, {:performances => [:new, :create, :edit, :update,  :show,:index, :down, :export_excels, :send_excels],
                                              :performance_subjects => [:new, :create, :edit, :update, :destroy, :show]}, :require => :member
+    map.permission :archive_performances, {:performances =>  [:destroy]}, :require => :member
   end
 end
 

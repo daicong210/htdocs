@@ -18,7 +18,7 @@ class PerformancesController < ApplicationController
   include PerformancesHelper
   include PerformanceSubjectsHelper
   def index
-      @performances = get_performances_lsit
+      @performances = get_performances_lsit(@project)
       if !@performances.blank? then
         @performances.sort! { |a,b| b.date.to_s <=> a.date.to_s }
       end

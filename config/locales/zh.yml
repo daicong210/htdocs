@@ -438,6 +438,7 @@ zh:
   permission_manage_subtasks: 管理子任务
   permission_manage_departments: 管理部门
   permission_manage_performances: 绩效管理
+  permission_archive_performances: 绩效归档
   permission_manage_department_members: 管理人员部门
 
   project_module_issue_tracking: 问题跟踪
